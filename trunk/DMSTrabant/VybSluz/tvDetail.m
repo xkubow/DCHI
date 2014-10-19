@@ -13,6 +13,7 @@
 #import "vcSluzbyPicker.h"
 #import "vcPaketInfo.h"
 #import "tvMaster.h"
+#import "Rezident.h"
 
 #define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
 #define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
@@ -312,7 +313,7 @@
     btn.tag = eOKBTN;
     [cell.contentView addSubview:btn];
     
-    UILabel *lblDetail = [[UILabel alloc] initWithFrame:CGRectMake(r.size.width - 596, 29, 420, 18)];
+    UILabel *lblDetail = [[UILabel alloc] initWithFrame:CGRectMake(r.size.width - 596, 29, 380, 18)];
     lblDetail.textAlignment = NSTextAlignmentLeft;
     lblDetail.backgroundColor = [UIColor clearColor];
     lblDetail.font = [UIFont fontWithName:@"Verdana" size:14];
@@ -333,8 +334,8 @@
 
 - (void) packetInfoButtonPressed:(UIButton*)sender
 {
-    NSLog(@"%@", sender.superview);
-    NSIndexPath *selectedIndex = [self.detailView indexPathForSelectedRow];
+    UITableViewCell *cell = [Rezident finTableViewCell:sender];
+    NSIndexPath *selectedIndex = [self.detailView indexPathForCell:cell];
 
     
 //    vcPaketInfo *picker = [[vcPaketInfo alloc] initWithNibName:@"vcPaketInfo" bundle:[NSBundle mainBundle] PPdata:PPPaketInfoData NDdata:NDPaketInfoData];

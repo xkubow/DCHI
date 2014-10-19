@@ -98,57 +98,24 @@
     [back setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
                                           , NSForegroundColorAttributeName:[UIColor whiteColor]}
                               forState:UIControlStateNormal];
-    [back setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [back setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    [back setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [back setTintColor:[UIColor whiteColor]];
     
     _btnAirPrint = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(airPrintContent:)];
-//    [_btnAirPrint setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
-//                                    , NSForegroundColorAttributeName:[UIColor whiteColor]}
-//                        forState:UIControlStateNormal];
-    [_btnAirPrint setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [_btnAirPrint setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    [_btnAirPrint setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [_btnAirPrint setImage:[UIImage imageNamed:@"airprinter.png"]];
     [_btnAirPrint setTintColor:[UIColor whiteColor]];
     
     _btnServerPrint = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(serverPrintContent:)];
-//    [_btnServerPrint setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
-//                                            , NSForegroundColorAttributeName:[UIColor whiteColor]}
-//                                forState:UIControlStateNormal];
-    [_btnServerPrint setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [_btnServerPrint setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    [_btnServerPrint setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [_btnServerPrint setImage:[UIImage imageNamed:@"printer.png"]];
     [_btnServerPrint setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem *btnSign = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(sign:)];
-//    [btnSign setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
-//                                               , NSForegroundColorAttributeName:[UIColor whiteColor]}
-//                                   forState:UIControlStateNormal];
-    [btnSign setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [btnSign setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    [btnSign setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [btnSign setImage:[UIImage imageNamed:@"sign.png"]];
     [btnSign setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem *btnOpenIn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(openIn:)];
-//    [btnOpenIn setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
-//                                       , NSForegroundColorAttributeName:[UIColor whiteColor]}
-//                           forState:UIControlStateNormal];
-    [btnOpenIn setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [btnOpenIn setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    [btnOpenIn setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [btnOpenIn setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem *btnEmail = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(sendEmail:)];
-//    [btnEmail setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
-//                                         , NSForegroundColorAttributeName:[UIColor whiteColor]}
-//                             forState:UIControlStateNormal];
-    [btnEmail setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [btnEmail setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    [btnEmail setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [btnEmail setImage:[UIImage imageNamed:@"mail.png"]];
     [btnEmail setTintColor:[UIColor whiteColor]];
     

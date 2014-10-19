@@ -6,19 +6,27 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>84E1F906-75A3-4B4A-B092-82AB1F3BD96D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DirectCheckin</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>38dd9d58-cf7f-0f48-afde-f217f4b640d6++2329</key>
 		<string>http://tsczbndb001.tsczdms.local:8008/svn/MobileCheckIn/branches/2.16.4/DMSTrabant/DMSTrabant/Settings.bundle</string>
 		<key>3A71F09A-1896-46AB-9AF2-F662D6C95520</key>
 		<string>http://tsczbndb001.tsczdms.local:8008/svn/MobileCheckIn/branches/2.16.4</string>
+		<key>80F746951FB738A44443B73B9515935687A24835</key>
+		<string>https://github.com/xkubow/DCHI.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/DirectCheckin.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>38dd9d58-cf7f-0f48-afde-f217f4b640d6++2329</key>
-		<string>Settings.bundle</string>
+		<string>../../../../Settings.bundle</string>
 		<key>3A71F09A-1896-46AB-9AF2-F662D6C95520</key>
-		<string>trunk</string>
+		<string>../../../../trunk</string>
+		<key>80F746951FB738A44443B73B9515935687A24835</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
@@ -28,13 +36,21 @@
 		<string>http://tsczbndb001.tsczdms.local:8008/svn/MobileCheckIn</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://tsczbndb001.tsczdms.local:8008/svn/MobileCheckIn/branches/2.16.4/DMSTrabant/DMSTrabant/Settings.bundle</string>
+	<string>https://github.com/xkubow/DCHI.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>38dd9d58-cf7f-0f48-afde-f217f4b640d6++2329</string>
+	<string>80F746951FB738A44443B73B9515935687A24835</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80F746951FB738A44443B73B9515935687A24835</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DCHI</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>

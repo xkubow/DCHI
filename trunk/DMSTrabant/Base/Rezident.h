@@ -11,5 +11,6 @@
 @interface Rezident : NSObject
 
 + (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
++ (UITableViewCell *) finTableViewCell:(id)obj;
 
 @end

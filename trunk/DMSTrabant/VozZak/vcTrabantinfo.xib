@@ -835,10 +835,10 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1540" userLabel="vLine">
-                                    <rect key="frame" x="18" y="520" width="958" height="6"/>
+                                    <rect key="frame" x="8" y="521" width="978" height="5"/>
                                     <color key="backgroundColor" red="0.47058826684951782" green="0.61176472902297974" blue="0.63921570777893066" alpha="1" colorSpace="deviceRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="6" id="8W4-Ix-BpS"/>
+                                        <constraint firstAttribute="height" constant="5" id="8W4-Ix-BpS"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -855,13 +855,13 @@
                                 <constraint firstItem="381" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="338" id="1371"/>
                                 <constraint firstAttribute="trailing" secondItem="832" secondAttribute="trailing" constant="269" id="1490"/>
                                 <constraint firstItem="418" firstAttribute="trailing" secondItem="372" secondAttribute="trailing" id="1629"/>
-                                <constraint firstItem="1540" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="18" id="1632"/>
+                                <constraint firstItem="1540" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="8" id="1632"/>
                                 <constraint firstItem="1540" firstAttribute="centerX" secondItem="380" secondAttribute="centerX" id="1635"/>
                                 <constraint firstItem="1540" firstAttribute="centerX" secondItem="374" secondAttribute="centerX" id="1637"/>
                                 <constraint firstItem="380" firstAttribute="top" secondItem="381" secondAttribute="top" id="1639"/>
                                 <constraint firstItem="379" firstAttribute="top" secondItem="380" secondAttribute="top" id="1640"/>
                                 <constraint firstItem="380" firstAttribute="centerX" secondItem="418" secondAttribute="centerX" id="1641"/>
-                                <constraint firstItem="1540" firstAttribute="top" secondItem="372" secondAttribute="top" constant="520" id="1669"/>
+                                <constraint firstItem="1540" firstAttribute="top" secondItem="372" secondAttribute="top" constant="521" id="1669"/>
                                 <constraint firstItem="13x-WG-Jln" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="0TG-vm-0z3"/>
                                 <constraint firstItem="418" firstAttribute="top" secondItem="372" secondAttribute="top" id="4nl-qh-xjV"/>
                                 <constraint firstItem="379" firstAttribute="top" secondItem="832" secondAttribute="top" id="7Vs-EU-jbh"/>

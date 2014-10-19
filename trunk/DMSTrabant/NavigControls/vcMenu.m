@@ -57,6 +57,7 @@
                 NSLocalizedString(@"Document", nil), nil];
         [menu showFromBarButtonItem:Sender animated:YES];
         
+        
         id obj = rootTBC.selectedViewController;
         while (![obj isKindOfClass:[vcBase class]] && class_getProperty([obj class], "viewControllers") != NULL)
             obj = [obj viewControllers].lastObject;

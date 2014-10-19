@@ -1,0 +1,7 @@
+PrivateResourceDummy.donotdelete
+
+!!! !!! !!!
+
+This file is needed for retrieving the path for the private resources (different in App respectively SDK build).
+
+Hence, do not delete or rename the file, unless the according changes are also made inside XCAResourceWrapper.

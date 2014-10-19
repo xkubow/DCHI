@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="vcTrabantPictures">
+            <connections>
+                <outlet property="btnSiluety" destination="124" id="136"/>
+                <outlet property="chbOderky" destination="5" id="93"/>
+                <outlet property="imgSpona" destination="3" id="94"/>
+                <outlet property="lblExterier" destination="8" id="107"/>
+                <outlet property="lblOderky" destination="6" id="108"/>
+                <outlet property="lblPohledy" destination="10" id="106"/>
+                <outlet property="lblUser" destination="109" id="116"/>
+                <outlet property="mainImgView" destination="14" id="95"/>
+                <outlet property="scPicSelector" destination="9" id="96"/>
+                <outlet property="scStavExterieru" destination="7" id="97"/>
+                <outlet property="svImages" destination="12" id="98"/>
+                <outlet property="view" destination="1" id="92"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="alu_grid_texture_view.png" translatesAutoresizingMaskIntoConstraints="NO" id="79">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="655"/>
+                </imageView>
+                <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                    <rect key="frame" x="15" y="27" width="994" height="620"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="top" image="OctavkaLavyBok.png" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                            <rect key="frame" x="1" y="44" width="991" height="365"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="okrajSrollView.png" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                            <rect key="frame" x="5" y="484" width="984" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="c6k-0g-CtW"/>
+                            </constraints>
+                        </imageView>
+                        <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                            <rect key="frame" x="6" y="485" width="982" height="128"/>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                            <rect key="frame" x="910" y="407" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="P5T-YW-JBT"/>
+                                <constraint firstAttribute="width" constant="64" id="fWA-hP-3AD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="FOTO" image="camera.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="camera.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showCameraUI:" destination="-1" eventType="touchUpInside" id="100"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Pohledy" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                            <rect key="frame" x="20" y="413" width="127" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="127" id="by2-pH-JFC"/>
+                                <constraint firstAttribute="height" constant="20" id="fYi-yq-DPz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                            <color key="textColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                            <rect key="frame" x="20" y="434" width="457" height="29"/>
+                            <segments>
+                                <segment title="Levý bok"/>
+                                <segment title="Zadní část"/>
+                                <segment title="Pravý bok"/>
+                                <segment title="Přední část"/>
+                                <segment title="Střecha"/>
+                            </segments>
+                            <color key="tintColor" red="0.46666669849999998" green="0.61176472900000001" blue="0.64313727620000005" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="imgChange:" destination="-1" eventType="valueChanged" id="99"/>
+                            </connections>
+                        </segmentedControl>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Exteriér" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                            <rect key="frame" x="508" y="413" width="127" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="127" id="OoF-Wr-dzE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                            <color key="textColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                            <rect key="frame" x="508" y="434" width="259" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="259" id="U1V-IJ-Zhl"/>
+                            </constraints>
+                            <segments>
+                                <segment title="A"/>
+                                <segment title="B"/>
+                                <segment title="C"/>
+                            </segments>
+                            <color key="tintColor" red="0.47058826684951782" green="0.61176472902297974" blue="0.63921570777893066" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="valueChanged:" destination="-1" eventType="valueChanged" id="101"/>
+                            </connections>
+                        </segmentedControl>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Oděrky" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                            <rect key="frame" x="793" y="413" width="92" height="20"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                            <color key="textColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Informace užívateľovi" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="109">
+                            <rect key="frame" x="20" y="7" width="583" height="23"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="PCQ-mP-DY4"/>
+                                <constraint firstAttribute="width" constant="583" id="jfk-eA-mg7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <size key="shadowOffset" width="1" height="1"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                            <rect key="frame" x="793" y="432" width="51" height="31"/>
+                            <color key="tintColor" red="0.47058826684951782" green="0.61176472902297974" blue="0.63921570777893066" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="onTintColor" red="0.46666669849999998" green="0.61176472900000001" blue="0.64313727620000005" alpha="1" colorSpace="deviceRGB"/>
+                        </switch>
+                        <imageView userInteractionEnabled="NO" tag="112" contentMode="scaleToFill" image="spona_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                            <rect key="frame" x="322" y="0.0" width="350" height="54"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="124">
+                            <rect key="frame" x="873" y="6" width="115" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="mzO-mi-z3V"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                            <state key="normal" backgroundImage="SiluetaButton.png"/>
+                            <connections>
+                                <action selector="siluetsDidTutchUpInside:" destination="-1" eventType="touchUpInside" id="135"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="13" firstAttribute="centerY" secondItem="12" secondAttribute="centerY" id="49P-hb-4uS"/>
+                        <constraint firstItem="14" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="1" id="5wa-O6-jme"/>
+                        <constraint firstItem="5" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="26" id="6La-bA-BCU"/>
+                        <constraint firstItem="7" firstAttribute="leading" secondItem="9" secondAttribute="trailing" constant="31" id="6oZ-mj-sfy"/>
+                        <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="2" id="APy-cJ-zak"/>
+                        <constraint firstItem="109" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" symbolic="YES" id="C00-ob-tt3"/>
+                        <constraint firstItem="13" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="21" id="Ci9-ef-7BZ"/>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="8" secondAttribute="top" id="Ghg-p2-E5V"/>
+                        <constraint firstItem="10" firstAttribute="baseline" secondItem="8" secondAttribute="baseline" id="HMi-AW-ZHL"/>
+                        <constraint firstItem="6" firstAttribute="top" secondItem="8" secondAttribute="top" id="ICP-KU-hXh"/>
+                        <constraint firstItem="124" firstAttribute="top" secondItem="4" secondAttribute="top" constant="6" id="J4A-mv-S1s"/>
+                        <constraint firstItem="11" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="25" id="Omk-Rx-rTY"/>
+                        <constraint firstItem="7" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="25" id="Plv-Nf-4Hj"/>
+                        <constraint firstItem="13" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="5" id="RcQ-3j-MUl"/>
+                        <constraint firstItem="14" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="SvJ-0A-0Gk"/>
+                        <constraint firstItem="14" firstAttribute="top" secondItem="109" secondAttribute="bottom" constant="14" id="Tky-dx-3Hb"/>
+                        <constraint firstItem="13" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="22" id="UP3-VM-ivi"/>
+                        <constraint firstItem="10" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" id="Uja-xT-J6A"/>
+                        <constraint firstItem="11" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="68" id="YCy-5N-unz"/>
+                        <constraint firstItem="6" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="Yhh-66-05N"/>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="4" id="afa-L0-O3b"/>
+                        <constraint firstItem="3" firstAttribute="top" secondItem="4" secondAttribute="top" id="diB-hJ-OWt"/>
+                        <constraint firstItem="6" firstAttribute="baseline" secondItem="8" secondAttribute="baseline" id="fcb-cW-3sH"/>
+                        <constraint firstItem="109" firstAttribute="top" secondItem="4" secondAttribute="top" constant="7" id="gOX-z2-qnu"/>
+                        <constraint firstItem="12" firstAttribute="trailing" secondItem="124" secondAttribute="trailing" id="gj9-1q-6Gg"/>
+                        <constraint firstItem="13" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="iiT-iM-Esc"/>
+                        <constraint firstAttribute="bottom" secondItem="13" secondAttribute="bottom" constant="6" id="jqf-yG-ZIX"/>
+                        <constraint firstItem="10" firstAttribute="leading" secondItem="9" secondAttribute="leading" id="niE-WT-9cu"/>
+                        <constraint firstItem="7" firstAttribute="top" secondItem="5" secondAttribute="top" constant="2" id="opK-p4-3hh"/>
+                        <constraint firstItem="7" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="oyQ-VV-cfS"/>
+                        <constraint firstItem="12" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="6" id="qBI-fo-VWb"/>
+                        <constraint firstItem="12" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="14" id="sHW-ZH-TDx"/>
+                        <constraint firstItem="13" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="13" id="sn1-O9-ie8"/>
+                        <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="1" id="u1k-jF-jMJ"/>
+                        <constraint firstItem="12" firstAttribute="centerX" secondItem="13" secondAttribute="centerX" id="uEs-lG-1vT"/>
+                        <constraint firstItem="14" firstAttribute="top" secondItem="124" secondAttribute="bottom" constant="6" id="usY-h8-Uv5"/>
+                        <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" constant="20" symbolic="YES" id="wJK-sD-PR7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="72"/>
+                <constraint firstItem="79" firstAttribute="top" secondItem="1" secondAttribute="top" id="87"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="27" id="117"/>
+                <constraint firstItem="79" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="2XM-kA-2tp"/>
+                <constraint firstAttribute="bottom" secondItem="79" secondAttribute="bottom" id="8DL-Py-7fd"/>
+                <constraint firstAttribute="trailing" secondItem="79" secondAttribute="trailing" id="B3v-Ma-SOm"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="8" id="LOL-md-yae"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="15" id="N6O-cr-i5C"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="OctavkaLavyBok.png" width="1024" height="370"/>
+        <image name="SiluetaButton.png" width="133" height="37"/>
+        <image name="alu_grid_texture_view.png" width="1024" height="655"/>
+        <image name="camera.png" width="75" height="75"/>
+        <image name="okrajSrollView.png" width="986" height="132"/>
+        <image name="spona_bottom.png" width="350" height="54"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

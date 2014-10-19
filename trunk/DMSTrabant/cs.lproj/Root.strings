@@ -1,0 +1,13 @@
+/* 
+  Root.strings
+  DirectCheckin
+
+  Created by Jan Kubis on 09.07.13.
+
+*/
+"OBDII" = "OBDII";
+"OBDII device address" = "Adresa OBDII zařizení";
+"Service address" = "Adresa serveru";
+"myUUID" = "UUID aplikace";
+"dbStructVer" = "Verzia DB štruktúry 5";
+"Enabled" = "Enableddddd";

@@ -1,0 +1,13 @@
+/* 
+  Root.strings
+  DirectCheckin
+
+  Created by Jan Kubis on 09.07.13.
+
+*/
+"OBDII" = "OBDII";
+"OBDII device address" = "OBDII device address";
+"Service address" = "Service address";
+"myUUID" = "my app UUID";
+"dbStructVer" = "DB struct version 5";
+"Enabled" = "Enableddddd";

@@ -1,0 +1,252 @@
+/* Ano */
+"Ano" = "Ja";
+
+/* back */
+"Back" = "Zurück";
+
+/* chyba msg */
+"Chyba komunikace" = "Kommunikationsfehler";
+
+/* Chyba   chyba title */
+"chyba title" = "Fehler";
+
+/* timeout msg */
+"connection timeout msg" = "Die Zeit für die Serverabfrage ist abgelaufen, weiter warten?";
+
+/* Nabidky */
+"Dalsia prijemka" = "Weitere Übernahme";
+
+/* tlacitko odhlasenia */
+"LogOff btn" = "Abmeldung";
+
+/* foto menu */
+"Nahled" = "Sicht";
+
+/* Ne */
+"Ne" = "Nein";
+
+/* grid zaznamov */
+"Nejednoznacne RZV" = "Uneindeutige Kfz-KZ, bitte präzisieren";
+
+/* Nabidky */
+"Neodeslano" = "NICHT ABGESCHICKT";
+
+/* Nabidky */
+"Neodoslane kompletne" = "Komplette Daten wurden nicht abgeschickt!";
+
+/* next */
+"Next" = "Weiter";
+
+/* navig title */
+"Nezname vozidlo" = "Unbekanntes Fahrzeug";
+
+/* Testovanie funkcnosti lokalizacie */
+"novy" = "neu CZ";
+
+/* Nabidky */
+"Odeslano Ok" = "Übertragung OK";
+
+/* HTTP/SOAP chyba msg */
+"Odpoved serveru nie SOAP" = "Die Serverantwort ist nicht SOAP";
+
+/* grid zaznamov */
+"Palivovy system" = "Kraftstoffsystem";
+
+/* grid zaznamov */
+"Planovane zakazky/checkIny" = "Geplannte Aufträge/Check-In in Bearbeitung";
+
+/* Nabidky */
+"Pokracovat" = "Fortsetzen";
+
+/* navig caption */
+"Povinne vybavy" = "Pflichtausstattung";
+
+/* chyba msg */
+"Pozadovane data nevyplnena" = "Ein oder mehrere Felder nicht ausgefüllt";
+
+/* chyba msg */
+"server chyba msg" = "Fehlerhafte Serverantwort";
+
+/* foto menu */
+"Smazat foto" = "Photo löschen";
+
+/* webService::sendMessage */
+"Spojeni nevytvorene" = "Die Verbindung konnte nicht hergestellt werden";
+
+/* Testovanie lokalizacie */
+"test" = "Test in Deutsch";
+
+/* navig title */
+"Vozidlo nevybrano" = "Fahrzeug nicht ausgewählt";
+
+/*collumn name*/
+"Status" = "Status";
+
+/*collumn name*/
+"RZV" = "Kfz-KZ";
+
+/*collumn name*/
+"Vozidlo" = "Fahrzeug";
+
+/*collumn name*/
+"Zakaznik" = "Kunde";
+
+/*collumn name*/
+"PZ c." = "GA Nr.";
+
+/*collumn name*/
+"VIN" = "VIN";
+
+/*collumn name*/
+"Zdroj" = "Quelle";
+
+/* mesice */
+"Leden" = "Januar";
+"Unor" = "Februar";
+"Brezen" = "März";
+"Duben" = "April";
+"Kveten" = "Mai";
+"Cerven"  = "Juni";
+"Cervenec" = "Juli";
+"Srpen" = "August";
+"Zari" = "September";
+"Rijen" = "Oktober";
+"Listopad" = "November";
+"Prosinec" = "Dezember";
+
+/*typ paliva*/
+"Benzin natural" = "Benzin bleifrei";
+"Diesel (Nafta)" = "Diesel";
+"Benzin olovnaty" = "Vebleites Benzin";
+"Plyn (LPG)" = "Flüssiggas (LPG)";
+"Elektro" = "Elektro";
+"Plyn (CNG)" = "Erdgas (CNG)";
+
+/*UI strings*/
+
+/*"Zakaznik" = "Kunde"*/
+"Zakaznik PH" = "Gefordert: Vor- und Nachname / Firma";
+"Stav tachometru" = "Kilometerstand";
+"Pozadovano" = "Gefordert";
+"Stav paliva" = "Kraftstoffstand";
+"stav paliva 0" = "0";
+"stav paliva 1" = "1/4";
+"stav paliva 2" = "2/4";
+"stav paliva 3" = "3/4";
+"stav paliva 4" = "V";
+"Informace o vozidle" = "Fahrzeugdaten:";
+"Vybava" = "Ausstattung:";
+"Vuz pristavil" = "Fahrzeug vorgef. von";
+"Jmeno Prijmeni" = "Vor- und Nachname";
+"Pojistovaci udalost" = "Versicherungsfall";
+"Uzivatel info" = "Nutzerdaten";
+
+"Status odeslani" = "Sendestatus";
+"Nabidka" = "Angebot";
+"Vybavy" = "Ausstattung";
+"Mista poskozeni" = "Beschädigungsstellen";
+"Fotografie" = "Photo";
+"Zvlastni nabidka" = "Sonderangebot";
+"Odesli data" = "Sende Daten";
+"Platnost emisi" = "AU gültig bis";
+"Platnost STK" = "TÜV gültig bis";
+"Levy bok" = "Linke Seite";
+"Zadni cast" = "Hinterteil";
+"Pravy bok" = "Rechte Seite";
+"Predni cast" = "Vorderteil";
+"Strecha" = "Dach";
+"Poznamka" = "Bemerkung:";
+"Provozni oderky" = "Betriebsbedingte Kratzer";
+"Prihlaseni" = "Anmeldung";
+"Uzivatel" = "Nutzer";
+"Heslo" = "Passwort";
+"OK" = "OK";
+"URL" = "URL";
+"Smaz certifikat" = "Das Zertifikat löschen";
+"Pouzity certifikat" = "Genutztes Zertifikat";
+"UUID" = "UUID";
+
+"Moje" = "Meine";
+"Ostatne" = "Andere";
+"HistorieVozu" = "Fahrzeughistorie";
+
+"Sluzby" = "Dienstleistungen";
+"Celky" = "Aggregate";
+"Typ" = "Typen";
+"Popis" = "Beschreibung";
+"PP/ND" = "AP/ET Nr.";
+"Os.č." = "Pers. Nr.";
+"Informácie o vozidle" = "Fahrzeugdaten";
+"Informácie o zakazníkovi" = "Kundendaten";
+"Stručná historie" = "Kurzfassung der Fzg.-Historie";
+"Historie" = "Fzg.-Historie";
+"Document" = "Protokoll";
+"Svolávací a dílenské akce" = "Rückruf- und Werkstattaktion";
+"Kód závady" = "Mängelkode";
+"Typ akce" = "Aktionstyp";
+"Plánované činnosti" = "Geplante Tätigkeiten";
+"Provozovna" = "Betriebsstätte";
+"Tým" = "Team";
+"Činnost" = "Tätigkeit";
+"Výhodné nabídky" = "Günstiges Angebot";
+"Volne vybavy" = "Freie Ausstattungen";
+"Volne sluzby" = "Freie Leistungen";
+"Volné nabidky" = "Freie Angebote";
+"Protokol" = "Protokoll";
+"Zakazkovy list" = "Auftragsblatt";
+"Poškození" = "Beschädigung";
+"Prohlídka" = "Untersuchung";
+"Nabídka služeb" = "Leistungsangebot";
+"Poradce" = "Berater";
+"Cena" = "Preis";
+"Cancel" = "Abbrechen";
+"OK" = "OK";
+
+/* Trabant */
+"Pohledy" = "Sichten";
+"Exterier" = "Aussenraum";
+"Oderky" = "Kratzer";
+"Siluety" = "Silhouette";
+
+/*Voz Info EF*/
+"Scenar" = "Szenario";
+"Datum prodeje/MR" = "Verkaufsdat/Zulass.";
+"Pojistovaci udalost" = "Versicherungsfall";
+"OTP" = "Tech. Ausweiss";
+"Platnost EK" = "AU gültig bis";
+"Servisni knizka" = "Servicebuch";
+"Interiér" = "Innenraum";
+"Informace o vozidle" = "Fahrzeugdaten";
+"Neulozene data" = "Daten wurden nicht übertragen";
+"Novy Checkin" = "Neue Inspektion";
+"Chcete novy checkin" = "Löschen aktueller Daten";
+"veriza DB struktury je nespravna" = "Diese Version ist nicht kompatibel mit der Version von Datenbank.\nClientversion: %d\nServerversion: %d\nStellen Sie Ihre Support-Team für ein Update, bitte.";
+"nespravna url" = "Falsche URL-Adresse";
+"parsovanie do DB sa nezdarilo"="Parsing in die Datenbank nicht erfolgreich";
+"Prevzi data"="Datenübernahme";
+"Nenalezena OBDII hlava"="ODB2 Lesekopf nicht gefunden, WiFi überprüfen";
+"Neprebehlo ulozenie do DMS"="Daten in DMS nicht übernommen";
+"Menu"="Menü";
+"AirPrint"="AirPrint";
+"Server print"="Serverdrucker";
+"Odosielam data"="Daten werden gesendet";
+"updating static data" = "Daten aktualisieren";
+"StaticDataUpdate" = "Lokale Daten wurde aktualisiert, ungespeicherte Daten werden gelöscht";
+"Odlozene polozky" = "Latenten Dienstleistungen";
+
+"Sign" = "Sign";
+"Send email" = "Send email";
+"Email" = "Email";
+"Stav oleje" = "Ölstand";
+"email predmet" = "Die Bescheinigung über die Annahme Ihres Fahrzeugs %@ %@";
+"email sprava" = "Sehr geehrter Kunde,\nentnehmen Sie bitte für Service eingeschlossen das Protokoll des Eingangs Ihres Autos %@, %@, %@.\n\nMit freundlichen Grüßen,\n%@\n%@";
+
+"Material" = "Material";
+"Prace" = "Arbeit";
+"Celkem" = "Gesamt";
+"ks" = "st";
+"All packets"="Alle Pakete";
+"ND"="Ersatzteile";
+"PP"="Jobpositionen";
+"Packet search"="Packet search";
+"Odoslanie emailu"="Senden Abnahmeprotokoll per E-Mail";

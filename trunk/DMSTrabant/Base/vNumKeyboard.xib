@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="vNumKeyboard">
+            <connections>
+                <outlet property="btnFloatPointSep" destination="102" id="189"/>
+                <outlet property="view" destination="1" id="176"/>
+                <outletCollection property="buttons" destination="3" id="I7Q-su-edQ"/>
+                <outletCollection property="buttons" destination="24" id="qAp-dX-kxz"/>
+                <outletCollection property="buttons" destination="33" id="seS-Jj-sVv"/>
+                <outletCollection property="buttons" destination="43" id="TeA-tH-jgv"/>
+                <outletCollection property="buttons" destination="44" id="S7C-ta-S5t"/>
+                <outletCollection property="buttons" destination="45" id="g0K-nZ-KCf"/>
+                <outletCollection property="buttons" destination="68" id="OYE-YW-skf"/>
+                <outletCollection property="buttons" destination="69" id="bp3-GY-ftk"/>
+                <outletCollection property="buttons" destination="70" id="zxM-xB-VlD"/>
+                <outletCollection property="buttons" destination="100" id="ISt-Fh-vQ0"/>
+                <outletCollection property="buttons" destination="101" id="J10-E4-JPL"/>
+                <outletCollection property="buttons" destination="102" id="Vkr-7d-FkJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="244" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="101" userLabel="btn_0">
+                    <rect key="frame" x="81" y="240" width="81" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="0" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="187"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3" userLabel="btn_1">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="7uW-UV-X4e"/>
+                        <constraint firstAttribute="height" constant="80" id="jBJ-ci-FLg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="1" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="177"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24" userLabel="btn_2">
+                    <rect key="frame" x="81" y="0.0" width="81" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="81" id="0bE-oU-tIb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="2" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="178"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33" userLabel="btn_3">
+                    <rect key="frame" x="163" y="0.0" width="81" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="81" id="jkG-Yj-8RT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="3" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="179"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43" userLabel="btn_4">
+                    <rect key="frame" x="0.0" y="80" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="zKk-UF-7Jo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="4" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="180"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44" userLabel="btn_5">
+                    <rect key="frame" x="81" y="80" width="81" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="5" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="181"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45" userLabel="btn_6">
+                    <rect key="frame" x="163" y="80" width="81" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="6" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="182"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68" userLabel="btn_7">
+                    <rect key="frame" x="0.0" y="160" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="g2t-ab-bGF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="7" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="183"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69" userLabel="btn_8">
+                    <rect key="frame" x="81" y="160" width="81" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="8" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="184"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70" userLabel="btn_9">
+                    <rect key="frame" x="163" y="160" width="81" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="9" backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="185"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="100" userLabel="btn_C">
+                    <rect key="frame" x="0.0" y="240" width="80" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="C" backgroundImage="kalk_clear_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="sMm-lr-geO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="102" userLabel="btn_,">
+                    <rect key="frame" x="163" y="240" width="81" height="80"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="," backgroundImage="kalk_cisla_bg.png">
+                        <color key="titleColor" red="0.26274511218070984" green="0.40000003576278687" blue="0.57647061347961426" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPresed:" destination="-1" eventType="touchUpInside" id="188"/>
+                    </connections>
+                </button>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="590" userLabel="vLineLeft">
+                    <rect key="frame" x="80" y="0.0" width="1" height="320"/>
+                    <color key="backgroundColor" red="0.46666669849999998" green="0.61176472900000001" blue="0.64313727620000005" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="627" userLabel="vLineRight">
+                    <rect key="frame" x="162" y="0.0" width="1" height="320"/>
+                    <color key="backgroundColor" red="0.46666669849999998" green="0.61176472900000001" blue="0.64313727620000005" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.46666669849999998" green="0.61176472900000001" blue="0.64313727620000005" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="627" firstAttribute="leading" secondItem="44" secondAttribute="trailing" id="3WO-wa-1Gw"/>
+                <constraint firstItem="68" firstAttribute="trailing" secondItem="43" secondAttribute="trailing" id="8aO-Bt-8II"/>
+                <constraint firstItem="69" firstAttribute="bottom" secondItem="68" secondAttribute="bottom" id="9U7-69-Z8L"/>
+                <constraint firstItem="43" firstAttribute="bottom" secondItem="44" secondAttribute="bottom" id="AKA-bE-Dyu"/>
+                <constraint firstItem="590" firstAttribute="top" secondItem="1" secondAttribute="top" id="BmH-F9-ReB"/>
+                <constraint firstItem="43" firstAttribute="top" secondItem="3" secondAttribute="bottom" id="CGY-MN-vfQ"/>
+                <constraint firstItem="68" firstAttribute="leading" secondItem="43" secondAttribute="leading" id="Cjk-SD-GcV"/>
+                <constraint firstItem="101" firstAttribute="trailing" secondItem="69" secondAttribute="trailing" id="Eop-DG-sbu"/>
+                <constraint firstItem="33" firstAttribute="bottom" secondItem="24" secondAttribute="bottom" id="Faa-ed-hbm"/>
+                <constraint firstItem="45" firstAttribute="leading" secondItem="33" secondAttribute="leading" id="GPE-dU-aAo"/>
+                <constraint firstItem="101" firstAttribute="bottom" secondItem="590" secondAttribute="bottom" id="HrV-2u-RXc"/>
+                <constraint firstAttribute="bottom" secondItem="627" secondAttribute="bottom" id="KOE-vl-mzn"/>
+                <constraint firstItem="101" firstAttribute="bottom" secondItem="627" secondAttribute="bottom" id="KaX-5r-sA1"/>
+                <constraint firstItem="70" firstAttribute="bottom" secondItem="69" secondAttribute="bottom" id="KlH-o3-dbO"/>
+                <constraint firstItem="590" firstAttribute="bottom" secondItem="100" secondAttribute="bottom" id="NbL-w5-2E5"/>
+                <constraint firstItem="45" firstAttribute="trailing" secondItem="70" secondAttribute="trailing" id="Ocb-yX-chj"/>
+                <constraint firstItem="43" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="QdQ-Hi-fZr"/>
+                <constraint firstItem="33" firstAttribute="trailing" secondItem="45" secondAttribute="trailing" id="TBU-3g-qWC"/>
+                <constraint firstItem="590" firstAttribute="leading" secondItem="100" secondAttribute="trailing" id="TJk-7J-d87"/>
+                <constraint firstItem="69" firstAttribute="leading" secondItem="44" secondAttribute="leading" id="TsF-9u-qNh"/>
+                <constraint firstItem="69" firstAttribute="leading" secondItem="590" secondAttribute="trailing" id="VgZ-rd-Qdo"/>
+                <constraint firstItem="33" firstAttribute="top" secondItem="627" secondAttribute="top" id="W38-kC-uhh"/>
+                <constraint firstItem="70" firstAttribute="trailing" secondItem="102" secondAttribute="trailing" id="WWA-wJ-gEi"/>
+                <constraint firstItem="43" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="X7b-eU-at3"/>
+                <constraint firstItem="24" firstAttribute="top" secondItem="590" secondAttribute="top" id="a0t-Lq-Blv"/>
+                <constraint firstItem="45" firstAttribute="top" secondItem="44" secondAttribute="top" id="azF-dJ-c62"/>
+                <constraint firstItem="101" firstAttribute="top" secondItem="100" secondAttribute="top" id="bjh-dK-7Me"/>
+                <constraint firstItem="70" firstAttribute="leading" secondItem="45" secondAttribute="leading" id="dRd-d3-Ut2"/>
+                <constraint firstItem="100" firstAttribute="top" secondItem="68" secondAttribute="bottom" id="eVp-o7-dkp"/>
+                <constraint firstItem="24" firstAttribute="top" secondItem="627" secondAttribute="top" id="ehL-sv-9HE"/>
+                <constraint firstItem="44" firstAttribute="trailing" secondItem="24" secondAttribute="trailing" id="f5V-ec-S7d"/>
+                <constraint firstItem="44" firstAttribute="trailing" secondItem="69" secondAttribute="trailing" id="fyG-rs-PDh"/>
+                <constraint firstItem="590" firstAttribute="top" secondItem="3" secondAttribute="top" id="g8n-6G-UPD"/>
+                <constraint firstItem="68" firstAttribute="leading" secondItem="100" secondAttribute="leading" id="gkF-1D-oNt"/>
+                <constraint firstItem="102" firstAttribute="leading" secondItem="627" secondAttribute="trailing" id="hvP-Tq-2gA"/>
+                <constraint firstItem="68" firstAttribute="top" secondItem="43" secondAttribute="bottom" id="iqs-Y5-YE6"/>
+                <constraint firstItem="102" firstAttribute="top" secondItem="101" secondAttribute="top" id="j0M-pS-E0B"/>
+                <constraint firstAttribute="trailing" secondItem="70" secondAttribute="trailing" id="jJv-NY-qUt"/>
+                <constraint firstItem="44" firstAttribute="top" secondItem="43" secondAttribute="top" id="lb6-HM-szx"/>
+                <constraint firstItem="43" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="mf6-QK-z95"/>
+                <constraint firstItem="69" firstAttribute="top" secondItem="68" secondAttribute="top" id="o13-uc-EXS"/>
+                <constraint firstItem="70" firstAttribute="leading" secondItem="102" secondAttribute="leading" id="qg9-wM-uGq"/>
+                <constraint firstItem="101" firstAttribute="leading" secondItem="69" secondAttribute="leading" id="rAU-gO-hsM"/>
+                <constraint firstItem="68" firstAttribute="trailing" secondItem="100" secondAttribute="trailing" id="rkU-ta-gvV"/>
+                <constraint firstItem="24" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="81" id="tum-KR-nhW"/>
+                <constraint firstItem="24" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="ul6-pK-V4N"/>
+                <constraint firstItem="102" firstAttribute="bottom" secondItem="627" secondAttribute="bottom" id="vMS-pq-sJG"/>
+                <constraint firstItem="24" firstAttribute="leading" secondItem="44" secondAttribute="leading" id="wNC-KO-9tc"/>
+                <constraint firstItem="70" firstAttribute="top" secondItem="69" secondAttribute="top" id="xmm-lj-fIB"/>
+                <constraint firstItem="45" firstAttribute="bottom" secondItem="44" secondAttribute="bottom" id="zbn-lS-IHB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kalk_cisla_bg.png" width="1" height="60"/>
+        <image name="kalk_clear_bg.png" width="1" height="60"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

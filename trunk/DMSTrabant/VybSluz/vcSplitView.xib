@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="vcSplitView">
+            <connections>
+                <outlet property="detailTableView" destination="84" id="328"/>
+                <outlet property="masterTableView" destination="86" id="329"/>
+                <outlet property="packetSearchBar" destination="330" id="396"/>
+                <outlet property="view" destination="83" id="97"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="83">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="alu_grid_texture_view.png" translatesAutoresizingMaskIntoConstraints="NO" id="85">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="246">
+                    <rect key="frame" x="15" y="27" width="994" height="733"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="303">
+                            <rect key="frame" x="322" y="0.0" width="1" height="733"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="86" customClass="tvMaster">
+                            <rect key="frame" x="0.0" y="44" width="322" height="689"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="84" customClass="tvDetail">
+                            <rect key="frame" x="323" y="0.0" width="671" height="733"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="671" id="238"/>
+                            </constraints>
+                        </tableView>
+                        <imageView userInteractionEnabled="NO" tag="112" contentMode="scaleToFill" image="spona_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="290">
+                            <rect key="frame" x="322" y="0.0" width="350" height="54"/>
+                        </imageView>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Packet search" translatesAutoresizingMaskIntoConstraints="NO" id="330">
+                            <rect key="frame" x="0.0" y="0.0" width="322" height="44"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="338"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="86" firstAttribute="leading" secondItem="246" secondAttribute="leading" id="282"/>
+                        <constraint firstItem="84" firstAttribute="trailing" secondItem="246" secondAttribute="trailing" id="286"/>
+                        <constraint firstItem="84" firstAttribute="top" secondItem="246" secondAttribute="top" id="288"/>
+                        <constraint firstItem="84" firstAttribute="bottom" secondItem="246" secondAttribute="bottom" id="289"/>
+                        <constraint firstItem="303" firstAttribute="top" secondItem="246" secondAttribute="top" id="311"/>
+                        <constraint firstItem="303" firstAttribute="bottom" secondItem="246" secondAttribute="bottom" id="312"/>
+                        <constraint firstAttribute="trailing" secondItem="303" secondAttribute="trailing" constant="671" id="315"/>
+                        <constraint firstItem="330" firstAttribute="top" secondItem="246" secondAttribute="top" id="356"/>
+                        <constraint firstItem="330" firstAttribute="leading" secondItem="246" secondAttribute="leading" id="357"/>
+                        <constraint firstItem="330" firstAttribute="trailing" secondItem="86" secondAttribute="trailing" id="358"/>
+                        <constraint firstItem="86" firstAttribute="top" secondItem="330" secondAttribute="bottom" id="393"/>
+                        <constraint firstItem="86" firstAttribute="bottom" secondItem="246" secondAttribute="bottom" id="395"/>
+                        <constraint firstItem="290" firstAttribute="top" secondItem="303" secondAttribute="top" id="DmR-WP-dc7"/>
+                        <constraint firstItem="290" firstAttribute="centerX" secondItem="246" secondAttribute="centerX" id="cUk-QI-WkU"/>
+                        <constraint firstItem="290" firstAttribute="leading" secondItem="330" secondAttribute="trailing" id="cae-AF-dBL"/>
+                        <constraint firstItem="290" firstAttribute="leading" secondItem="303" secondAttribute="leading" id="yJY-qv-SnA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="85" firstAttribute="leading" secondItem="83" secondAttribute="leading" id="87"/>
+                <constraint firstItem="85" firstAttribute="top" secondItem="83" secondAttribute="top" id="88"/>
+                <constraint firstItem="85" firstAttribute="bottom" secondItem="83" secondAttribute="bottom" id="100"/>
+                <constraint firstItem="246" firstAttribute="leading" secondItem="83" secondAttribute="leading" constant="15" id="266"/>
+                <constraint firstItem="246" firstAttribute="centerX" secondItem="85" secondAttribute="centerX" id="300"/>
+                <constraint firstAttribute="bottom" secondItem="246" secondAttribute="bottom" constant="8" id="301"/>
+                <constraint firstItem="246" firstAttribute="top" secondItem="83" secondAttribute="top" constant="27" id="302"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alu_grid_texture_view.png" width="1024" height="655"/>
+        <image name="spona_bottom.png" width="350" height="54"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

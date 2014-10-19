@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="2" customClass="tvcNDPacketInfo">
+            <rect key="frame" x="0.0" y="0.0" width="700" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2" id="4FL-qA-5by">
+                <rect key="frame" x="0.0" y="0.0" width="700" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Název" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55" userLabel="lblNazov">
+                        <rect key="frame" x="73" y="4" width="304" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="0Lh-ug-XAy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vyrobek ND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3" userLabel="lblVyrobekCislo">
+                        <rect key="frame" x="73" y="25" width="280" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="280" id="UM1-eA-Fpv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Množství" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15" userLabel="lblMnozstvi">
+                        <rect key="frame" x="385" y="14" width="80" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="eJJ-Vw-Zqz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" text="Cena" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27" userLabel="lblCena">
+                        <rect key="frame" x="473" y="14" width="207" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="207" id="NSh-a5-j2L"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                        <color key="textColor" red="0.2588235438" green="0.39607846740000002" blue="0.58431375029999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="422">
+                        <rect key="frame" x="690" y="22" width="10" height="22"/>
+                        <color key="backgroundColor" red="0.043137256059999997" green="0.1098039299" blue="0.058823533359999999" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="55" firstAttribute="leading" secondItem="4FL-qA-5by" secondAttribute="leadingMargin" constant="65" id="4Le-Mw-5VZ"/>
+                    <constraint firstItem="3" firstAttribute="top" secondItem="55" secondAttribute="bottom" constant="1" id="Ctk-J3-tWz"/>
+                    <constraint firstItem="27" firstAttribute="centerY" secondItem="4FL-qA-5by" secondAttribute="centerY" id="GD4-ex-dQc"/>
+                    <constraint firstItem="15" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="32" id="JiF-rc-OP8"/>
+                    <constraint firstItem="55" firstAttribute="top" secondItem="4FL-qA-5by" secondAttribute="topMargin" constant="-4" id="NSF-BF-mdx"/>
+                    <constraint firstAttribute="trailing" secondItem="422" secondAttribute="trailing" id="UJl-5L-Kkv"/>
+                    <constraint firstItem="27" firstAttribute="leading" secondItem="15" secondAttribute="trailing" constant="8" symbolic="YES" id="ceb-8b-ZQh"/>
+                    <constraint firstItem="55" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="fHv-aB-LST"/>
+                    <constraint firstItem="422" firstAttribute="top" secondItem="4FL-qA-5by" secondAttribute="topMargin" constant="14" id="jwg-Wz-aCU"/>
+                    <constraint firstItem="422" firstAttribute="leading" secondItem="27" secondAttribute="trailing" constant="10" id="lWq-Bu-Gt5"/>
+                    <constraint firstItem="15" firstAttribute="leading" secondItem="55" secondAttribute="trailing" constant="8" symbolic="YES" id="nwH-pk-hZ5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="422" secondAttribute="bottom" constant="-3" id="uhS-pq-De1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="15" secondAttribute="bottom" constant="5" id="vct-YZ-yUU"/>
+                    <constraint firstItem="27" firstAttribute="baseline" secondItem="15" secondAttribute="firstBaseline" id="ywT-P3-KmW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Cena" destination="27" id="203"/>
+                <outlet property="ItemNumber" destination="3" id="360"/>
+                <outlet property="Mnozstvi" destination="15" id="202"/>
+                <outlet property="Nazev" destination="55" id="199"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="146"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

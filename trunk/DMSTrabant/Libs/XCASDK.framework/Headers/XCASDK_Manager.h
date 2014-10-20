@@ -48,13 +48,13 @@
  
  @return The version information as string.
  */
--(NSString *)getSDKVersionInformation;
++ (NSString *)getSDKVersionInformation;
 
 /*!
  @abstract Returns the SIGNificant SDK build date.
  
  @return The build date as string.
  */
--(NSString *)getSDKBuildDate;
++ (NSString *)getSDKBuildDate;
 
 @end

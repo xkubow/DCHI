@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 xyzmo Software GmbH. All rights reserved.
 //
 
-// #define SDK_DEBUG 1
+//#define SDK_DEBUG 1
 
 /*!
  @copyright 2011-2013 xyzmo Software GmbH
@@ -14,6 +14,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "XCAEnums.h"
 
 #define kMultiSelectListboxSeparator @"°°°"
 
@@ -83,7 +84,10 @@ typedef enum {
 	kXCABackToDocumentsButton,
 	kXCAAddFolderButton,
 	kXCASupportButton,
-	kXCAAutoSteppingButton
+	kXCAAutoSteppingButton,
+	kXCAReportIssueButton,
+	kXCAShowHideMasterButton,
+	kXCASetAsTemplateButton
 } XCAOperationToolbarButton;
 
 /*!
@@ -110,13 +114,6 @@ typedef enum {
 	kXCALoggingError,
 	kXCALoggingTemporary
 } XCAOperationLoggingType;
-
-/*!
- @abstract The debug function types.
- */
-typedef enum {
-	kXCADebugFunctionPenInfo
-} XCADebugFunction;
 
 /*!
  @abstract The backend job types.
@@ -255,7 +252,7 @@ typedef enum {
 @property(nonatomic, strong) NSString *serverWorkstepId;
 @property(nonatomic, strong) NSString *label;
 @property(nonatomic) XCAWorkstepState state;
-@property(nonatomic) NSDate *expirationDate;
+@property(nonatomic, strong) NSDate *expirationDate;
 @property(nonatomic) BOOL isFinished;
 @property(nonatomic) BOOL isRejected;
 
@@ -299,16 +296,7 @@ typedef enum {
  @param pUrlToWorkstep The workstep URL
  @param pOfflineStoragePath The offline storage path
  */
--(BOOL) XCASDK_Operations_DidLoadWorkstep:(NSURL *)pUrlToWorkstep toOfflineStorage:(NSString *)pOfflineStoragePath;
-
-/*!
- @abstract Called when a loading operation fails.
- 
- @param pErrorDescription The error description
- @param pErrorId The error id
- @return YES if delegate will show the error to the user
- */
--(BOOL) XCASDK_Operations_LoadError:(NSString *)pErrorDescription withId:(XCAOperationError)pErrorId;
+-(BOOL) XCASDK_Operations_DidLoadWorkstep:(NSString *)pWorkstepId toOfflineStorage:(NSString *)pOfflineStoragePath;
 
 /*!
  @abstract Called when a general operation fails.
@@ -318,15 +306,6 @@ typedef enum {
  @return YES if delegate will show the error to the user
  */
 -(BOOL) XCASDK_Operations_GeneralError:(NSString *)pErrorDescription withId:(XCAOperationError)pErrorId;
-
-/*!
- @abstract Called when a finishing operation fails.
- 
- @param pErrorDescription The error description
- @param pErrorId The error id
- @return YES if delegate will show the error to the user
- */
--(BOOL) XCASDK_Operations_FinishError:(NSString *)pErrorDescription withId:(XCAOperationError)pErrorId;
 
 /*!
  @abstract Called when a page preview has been fetched from the server.
@@ -367,7 +346,7 @@ typedef enum {
 /*!
  @abstract Called when a page is shown.
  
- @param pPageNr The page number
+ @param pPageNr The page number (zero based)
  */
 -(void) XCASDK_Operations_DidShowPage:(int)pPageNr;
 
@@ -534,13 +513,6 @@ typedef enum {
 -(BOOL)XCASDK_Operations_MayUsePenForSignature:(NSString *)pPenDriverName supportsPressure:(BOOL)pSupportsPressure;
 
 /*!
- @abstract Specifies if a particular debugging function should be enabled.
- 
- @return YES to activate the given debugging function
- */
--(BOOL)XCASDK_Operations_DebugActivateFunction:(XCADebugFunction)pDebugFunction;
-
-/*!
  @abstract Specifies if the document should be zoomed to full page after the master view has been toggled.
  
  @return YES to zoom the document to full page
@@ -613,6 +585,14 @@ typedef enum {
  @return The license user id to be used or nil to use standard behavior
  */
 - (NSString *)XCASDK_Operations_LicenseUserIdForServer:(NSString *)serverUrl;
+
+/*!
+ @abstract Retrieves custom menu buttons for the given control place.
+ 
+ @param controlPlace The place where to add the custom buttons
+ @return The custom buttons for this control place
+ */
+- (NSArray *)XCASDK_Operations_CustomMenuButtons:(XCAControlPlace)controlPlace;
 
 @end
 

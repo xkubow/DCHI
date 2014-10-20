@@ -80,8 +80,16 @@ typedef enum {
 } XCAColorType;
 
 /*!
+ @abstract The string types.
+ */
+typedef enum {
+	XCAStringTypeApplicationTitle
+} XCAStringType;
+
+/*!
  @abstract The hint element types.
  */
 typedef enum {
-	kXCAImportHelp
+	kXCAImportHelp,
+	kXCACreateTemplateHelp
 } XCAHintType;

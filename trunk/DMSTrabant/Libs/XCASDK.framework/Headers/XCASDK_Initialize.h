@@ -12,13 +12,14 @@
 
 #import <Foundation/Foundation.h>
 #import "XCAEnums.h"
+#import <UIKit/UIKit.h>
 
 /*!
  @abstract The delegate protocol for customizing the appearance of the SIGNificant view.
  */
 @protocol XCASDK_InitializeDelegate
 
-@required
+@optional
 
 /*!
  @abstract Will be called whenever a new GUI element is created and initialized to override styles, etc.
@@ -30,8 +31,6 @@
  */
 -(void)XCASDK_Initialize_initControlElement:(id)pCocoaControl fromType:(XCAControlType)pControlType onPlace:(XCAControlPlace)pXCAPlace withIdentification:(NSString*)pXCAIdentification;
 
-@optional
-
 /*!
  @abstract Will be called whenever a color is defined for several (e.g. reusable) GUI elements.
  
@@ -40,6 +39,14 @@
  @return The desired color
  */
 -(UIColor *)XCASDK_Initialize_colorOfType:(XCAColorType)pXCAColorType onPlace:(XCAControlPlace)pXCAPlace;
+
+/*!
+ @abstract Called whenever a custom string is needed.
+ 
+ @param type The type of the string
+ @return The desired string
+ */
+- (NSString *)XCASDK_Initialize_StringForType:(XCAStringType)type;
 
 /*!
  @abstract Will be called whenever a new font is defined / used.
@@ -72,13 +79,6 @@
  @return The encryption certificate as string
  */
 -(NSString *)XCASDK_Initialize_GetEncryptionCertificate;
-
-/*!
- @abstract Specifies if the current user name should be shown in title instead of document name.
- 
- @return YES to show the user name
- */
--(BOOL)XCASDK_Initialize_ShowUserNameInApplicationTitle;
 
 /*!
  @abstract Specifies the preferred status bar style for iOS 7 devices.

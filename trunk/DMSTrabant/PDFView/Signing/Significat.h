@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface vcSignificat : UIViewController 
-
+@interface Significat : NSObject
+- (void)openSignificantViewer;
 @end

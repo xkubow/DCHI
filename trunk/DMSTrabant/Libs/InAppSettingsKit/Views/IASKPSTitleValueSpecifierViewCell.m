@@ -27,6 +27,10 @@
 
 	// if there's an image, make room for it
 	CGFloat imageOffset = floorf(self.imageView.image ? self.imageView.bounds.size.width + self.imageView.frame.origin.x : 0);
+	if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1 && imageOffset == 0)
+	{
+		imageOffset = 5;
+	}
   
 	// set the left title label frame
 	CGFloat labelWidth = [self.textLabel sizeThatFits:CGSizeZero].width;

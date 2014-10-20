@@ -6,14 +6,18 @@
 //
 //
 
-#import "vcSignificat.h"
+#import "Significat.h"
 #import "SignPDFOperation.h"
 #import "SignPDFInit.h"
 #import "DMSetting.h"
 #import "XCASDK/XCASDK.h"
 #import "Config.h"
+#import "TrabantAppDelegate.h"
+#import "tbcBarController.h"
+#define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
+#define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
 
-@interface vcSignificat ()
+@interface Significat ()
 {
     BOOL openSignific;
     SignPDFOperation *operationsDelegate;
@@ -21,16 +25,18 @@
 }
 @end
 
-@implementation vcSignificat
+@implementation Significat
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    operationsDelegate = [[SignPDFOperation alloc] init];
-    initializationDelegate = [[SignPDFInit alloc] init];
-    openSignific = YES;
-    // Do any additional setup after loading the view.
+- (Significat *)init {
+    self = [super init];
+    if(self)
+    {
+        operationsDelegate = [[SignPDFOperation alloc] init];
+        initializationDelegate = [[SignPDFInit alloc] init];
+    }
+    return self;
 }
-
+/*
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -43,9 +49,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+*/
 
 // open the standalone app
--(IBAction)openSignificantViewer:(id)sender {
+- (void)openSignificantViewer {
     [[XCASDK_Manager sharedManager].sdkOperations clearOfflineDocuments];
     [XCASDK_Manager sharedManager].sdkInitialize.delegate = initializationDelegate;
     [XCASDK_Manager sharedManager].sdkOperations.delegate = operationsDelegate;
@@ -56,9 +63,14 @@
     [[XCASDK_Manager sharedManager].sdkOperations openWorkstep: workstepUrl];
 //        [[XCASDK_Manager sharedManager].sdkOperations syncWorkstep:[DMSetting sharedDMSetting].workStepId];
     
-    [self presentViewController:[[XCASDK_Manager sharedManager] getXCAViewController] animated:YES completion:^(){
-//        [openButton setHidden:NO];
-    }];
+//    UIViewController *vc = [[XCASDK_Manager sharedManager] getXCAViewController];
+//    UINavigationController *nc = (UINavigationController*)ROOTNAVIGATOR;
+    tbcBarController *tbc = (tbcBarController *)ROOTNAVIGATOR.viewControllers.lastObject;
+    
+//    [nc presentViewController:vc animated:YES completion:nil];
+    
+    
+    [tbc.selectedViewController.navigationController presentViewController:[[XCASDK_Manager sharedManager] getXCAViewController] animated:YES completion:nil];
 }
 
 

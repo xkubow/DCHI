@@ -302,6 +302,7 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [btn addTarget:self action:@selector(packetInfoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    btn.adjustsImageWhenHighlighted = YES;
     btn.tintColor = [UIColor colorWithRed:0.471 green:0.612 blue:0.639 alpha:1];
     cell.accessoryView = btn;
     

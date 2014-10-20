@@ -38,6 +38,8 @@
 		E92D966919F0DC4D007FCAC8 /* airprinter.png in Resources */ = {isa = PBXBuildFile; fileRef = E92D966519F0DC4D007FCAC8 /* airprinter.png */; };
 		E92D966A19F0DC4D007FCAC8 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = E92D966619F0DC4D007FCAC8 /* mail.png */; };
 		E92D966B19F0DC4D007FCAC8 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = E92D966719F0DC4D007FCAC8 /* printer.png */; };
+		E92D966D19F5678D007FCAC8 /* XCASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92D966C19F5678D007FCAC8 /* XCASDK.framework */; };
+		E92D967119F571FD007FCAC8 /* Lockbox.m in Sources */ = {isa = PBXBuildFile; fileRef = E92D967019F571FD007FCAC8 /* Lockbox.m */; };
 		E92F874219BEEFD20080535E /* vcEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F874119BEEFD20080535E /* vcEmail.m */; };
 		E92F874419BEF11A0080535E /* vcEmail.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F874319BEF11A0080535E /* vcEmail.xib */; };
 		E9310D20150F90AB00E9FE84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9310D1E150F90AB00E9FE84 /* Localizable.strings */; };
@@ -56,7 +58,7 @@
 		E99ADC7F19E2EED80009774C /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E99ADC7D19E2EED80009774C /* libFlurry.a */; };
 		E99ADC8019E2EED80009774C /* ProjectApiKey.txt in Resources */ = {isa = PBXBuildFile; fileRef = E99ADC7E19E2EED80009774C /* ProjectApiKey.txt */; };
 		E99ADC8519E53F780009774C /* SignPDFOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E99ADC8419E53F780009774C /* SignPDFOperation.m */; };
-		E99ADC8819E545D90009774C /* vcSignificat.m in Sources */ = {isa = PBXBuildFile; fileRef = E99ADC8719E545D90009774C /* vcSignificat.m */; };
+		E99ADC8819E545D90009774C /* Significat.m in Sources */ = {isa = PBXBuildFile; fileRef = E99ADC8719E545D90009774C /* Significat.m */; };
 		E99ADC8B19E5A30B0009774C /* SignPDFInit.m in Sources */ = {isa = PBXBuildFile; fileRef = E99ADC8A19E5A30B0009774C /* SignPDFInit.m */; };
 		E99BB08A19D328E600B0D1BF /* vcPDFImageViewver.m in Sources */ = {isa = PBXBuildFile; fileRef = E99BB08819D328E500B0D1BF /* vcPDFImageViewver.m */; };
 		E99BB08B19D328E600B0D1BF /* vcPDFImageViewver.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99BB08919D328E500B0D1BF /* vcPDFImageViewver.xib */; };
@@ -190,7 +192,6 @@
 		E9D39E461656257F0003628A /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0B50A714BB480200DA14A8 /* Default-Landscape~ipad.png */; };
 		E9D39E72165BE59A0003628A /* HistoriaUzivatela.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D39E71165BE59A0003628A /* HistoriaUzivatela.png */; };
 		E9D6D7FE19DBFD2000BF6E5A /* Rezident.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D6D7FD19DBFD2000BF6E5A /* Rezident.m */; };
-		E9D6D80419DED61B00BF6E5A /* XCASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6D80319DED61B00BF6E5A /* XCASDK.framework */; };
 		E9D6D80619DED67400BF6E5A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6D80519DED67400BF6E5A /* Accelerate.framework */; };
 		E9D6D80819DED67D00BF6E5A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6D80719DED67D00BF6E5A /* AudioToolbox.framework */; };
 		E9D6D80A19DED68800BF6E5A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6D80919DED68800BF6E5A /* AVFoundation.framework */; };
@@ -329,6 +330,9 @@
 		E92D966519F0DC4D007FCAC8 /* airprinter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airprinter.png; sourceTree = "<group>"; };
 		E92D966619F0DC4D007FCAC8 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		E92D966719F0DC4D007FCAC8 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
+		E92D966C19F5678D007FCAC8 /* XCASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCASDK.framework; path = DMSTrabant/Libs/XCASDK.framework; sourceTree = "<group>"; };
+		E92D966F19F571FD007FCAC8 /* Lockbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lockbox.h; sourceTree = "<group>"; };
+		E92D967019F571FD007FCAC8 /* Lockbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lockbox.m; sourceTree = "<group>"; };
 		E92F874019BEEFD20080535E /* vcEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcEmail.h; sourceTree = "<group>"; };
 		E92F874119BEEFD20080535E /* vcEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcEmail.m; sourceTree = "<group>"; };
 		E92F874319BEF11A0080535E /* vcEmail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vcEmail.xib; sourceTree = "<group>"; };
@@ -356,8 +360,8 @@
 		E99ADC7E19E2EED80009774C /* ProjectApiKey.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProjectApiKey.txt; sourceTree = "<group>"; };
 		E99ADC8319E53F780009774C /* SignPDFOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignPDFOperation.h; sourceTree = "<group>"; };
 		E99ADC8419E53F780009774C /* SignPDFOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignPDFOperation.m; sourceTree = "<group>"; };
-		E99ADC8619E545D90009774C /* vcSignificat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcSignificat.h; sourceTree = "<group>"; };
-		E99ADC8719E545D90009774C /* vcSignificat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcSignificat.m; sourceTree = "<group>"; };
+		E99ADC8619E545D90009774C /* Significat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Significat.h; sourceTree = "<group>"; };
+		E99ADC8719E545D90009774C /* Significat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Significat.m; sourceTree = "<group>"; };
 		E99ADC8919E5A30B0009774C /* SignPDFInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignPDFInit.h; sourceTree = "<group>"; };
 		E99ADC8A19E5A30B0009774C /* SignPDFInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignPDFInit.m; sourceTree = "<group>"; };
 		E99BB08719D328E500B0D1BF /* vcPDFImageViewver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcPDFImageViewver.h; sourceTree = "<group>"; };
@@ -572,7 +576,6 @@
 		E9D39E71165BE59A0003628A /* HistoriaUzivatela.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoriaUzivatela.png; sourceTree = "<group>"; };
 		E9D6D7FC19DBFD2000BF6E5A /* Rezident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rezident.h; sourceTree = "<group>"; };
 		E9D6D7FD19DBFD2000BF6E5A /* Rezident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rezident.m; sourceTree = "<group>"; };
-		E9D6D80319DED61B00BF6E5A /* XCASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCASDK.framework; path = DMSTrabant/Libs/XCASDK.framework; sourceTree = "<group>"; };
 		E9D6D80519DED67400BF6E5A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E9D6D80719DED67D00BF6E5A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E9D6D80919DED68800BF6E5A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -731,6 +734,7 @@
 				E9D6D81419DED6E800BF6E5A /* libstdc++.dylib in Frameworks */,
 				E9D6D81219DED6CB00BF6E5A /* GLKit.framework in Frameworks */,
 				E9D6D81019DED6B600BF6E5A /* CoreMotion.framework in Frameworks */,
+				E92D966D19F5678D007FCAC8 /* XCASDK.framework in Frameworks */,
 				E9D6D80E19DED69E00BF6E5A /* CoreBluetooth.framework in Frameworks */,
 				E9D6D80C19DED69300BF6E5A /* CoreAudio.framework in Frameworks */,
 				E9D6D80A19DED68800BF6E5A /* AVFoundation.framework in Frameworks */,
@@ -741,7 +745,6 @@
 				E9C63A7116A05037003EEBE6 /* CoreData.framework in Frameworks */,
 				E9C63A2C16A01353003EEBE6 /* libsqlite3.dylib in Frameworks */,
 				E9568DC01668C77900C0BEE8 /* libz.dylib in Frameworks */,
-				E9D6D80419DED61B00BF6E5A /* XCASDK.framework in Frameworks */,
 				E9568DB91668C2A500C0BEE8 /* SystemConfiguration.framework in Frameworks */,
 				E9568DB71668C27300C0BEE8 /* CFNetwork.framework in Frameworks */,
 				3178673B14E94BCC00A462D0 /* Security.framework in Frameworks */,
@@ -784,6 +787,7 @@
 		8B0B500514B7A4CD00DA14A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E92D966C19F5678D007FCAC8 /* XCASDK.framework */,
 				E9D6D81919DED71C00BF6E5A /* OpenGLES.framework */,
 				E9D6D81719DED70D00BF6E5A /* MessageUI.framework */,
 				E9D6D81519DED6F700BF6E5A /* libxml2.dylib */,
@@ -795,7 +799,6 @@
 				E9D6D80919DED68800BF6E5A /* AVFoundation.framework */,
 				E9D6D80719DED67D00BF6E5A /* AudioToolbox.framework */,
 				E9D6D80519DED67400BF6E5A /* Accelerate.framework */,
-				E9D6D80319DED61B00BF6E5A /* XCASDK.framework */,
 				E9F191FE182CF6DF008C01D0 /* AdSupport.framework */,
 				E94C2E4116B28D1A005C769D /* libcommonCrypto.dylib */,
 				E9C63A2B16A01353003EEBE6 /* libsqlite3.dylib */,
@@ -959,6 +962,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		E92D966E19F571FD007FCAC8 /* Lockbox */ = {
+			isa = PBXGroup;
+			children = (
+				E92D966F19F571FD007FCAC8 /* Lockbox.h */,
+				E92D967019F571FD007FCAC8 /* Lockbox.m */,
+			);
+			path = Lockbox;
+			sourceTree = "<group>";
+		};
 		E99ADC7B19E2EED80009774C /* Flurry */ = {
 			isa = PBXGroup;
 			children = (
@@ -972,8 +984,8 @@
 		E99ADC8219E53F390009774C /* Signing */ = {
 			isa = PBXGroup;
 			children = (
-				E99ADC8619E545D90009774C /* vcSignificat.h */,
-				E99ADC8719E545D90009774C /* vcSignificat.m */,
+				E99ADC8619E545D90009774C /* Significat.h */,
+				E99ADC8719E545D90009774C /* Significat.m */,
 				E99ADC8919E5A30B0009774C /* SignPDFInit.h */,
 				E99ADC8A19E5A30B0009774C /* SignPDFInit.m */,
 				E99ADC8319E53F780009774C /* SignPDFOperation.h */,
@@ -1068,6 +1080,7 @@
 		E9D368FF17008E61008D73B8 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				E92D966E19F571FD007FCAC8 /* Lockbox */,
 				E99ADC7B19E2EED80009774C /* Flurry */,
 				E9EC81B81817FDE30055DF3D /* TestFlightSDK */,
 				E9D3690017008E61008D73B8 /* ASIHTTPRequestClasses */,
@@ -1771,6 +1784,7 @@
 				E99ADC8B19E5A30B0009774C /* SignPDFInit.m in Sources */,
 				E9D6D89A19DED88300BF6E5A /* unzip.c in Sources */,
 				E9D6D8B919DED88300BF6E5A /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
+				E92D967119F571FD007FCAC8 /* Lockbox.m in Sources */,
 				8B0B501714B7A4CD00DA14A8 /* TrabantAppDelegate.m in Sources */,
 				E9D6D8AA19DED88300BF6E5A /* Toast+UIView.m in Sources */,
 				E9D368ED17008E38008D73B8 /* Base64Coding.m in Sources */,
@@ -1785,7 +1799,7 @@
 				E9D368F117008E38008D73B8 /* UUIDCreator.m in Sources */,
 				E9D368F217008E38008D73B8 /* vcBase.m in Sources */,
 				E9D368F317008E38008D73B8 /* VCBaseGrid.m in Sources */,
-				E99ADC8819E545D90009774C /* vcSignificat.m in Sources */,
+				E99ADC8819E545D90009774C /* Significat.m in Sources */,
 				E9D368F417008E38008D73B8 /* vNumKeyboard.m in Sources */,
 				E9D368F617008E38008D73B8 /* WSBaseService.m in Sources */,
 				E9D368FE17008E44008D73B8 /* WSDCHIDataTransfer.m in Sources */,
@@ -1978,24 +1992,30 @@
 		311AFF6014E9930200118B04 /* Ad Hoc Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/DMSTrabant/Libs",
+					"$(SRCROOT)",
+					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMSTrabant/DirectCheckin-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "DMSTrabant/Direct checkin-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -2003,7 +2023,7 @@
 					"\"$(SRCROOT)/DMSTrabant/Libs/TestFlightSDK\"",
 					"$(PROJECT_DIR)/DMSTrabant/Libs/Flurry",
 				);
-				OTHER_LDFLAGS = "-v";
+				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
 				PROVISIONING_PROFILE = "";
@@ -2011,6 +2031,7 @@
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc Distribution";
@@ -2090,22 +2111,28 @@
 		8B0B502114B7A4CD00DA14A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/DMSTrabant/Libs",
+					"$(SRCROOT)",
+					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMSTrabant/DirectCheckin-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "DMSTrabant/Direct checkin-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -2113,13 +2140,14 @@
 					"\"$(SRCROOT)/DMSTrabant/Libs/TestFlightSDK\"",
 					"$(PROJECT_DIR)/DMSTrabant/Libs/Flurry",
 				);
-				OTHER_LDFLAGS = "-v";
+				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
 				PROVISIONING_PROFILE = "";
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2127,22 +2155,28 @@
 		8B0B502214B7A4CD00DA14A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/DMSTrabant/Libs",
+					"$(SRCROOT)",
+					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMSTrabant/DirectCheckin-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "DMSTrabant/Direct checkin-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -2150,7 +2184,7 @@
 					"\"$(SRCROOT)/DMSTrabant/Libs/TestFlightSDK\"",
 					"$(PROJECT_DIR)/DMSTrabant/Libs/Flurry",
 				);
-				OTHER_LDFLAGS = "-v";
+				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
 				PROVISIONING_PROFILE = "";
@@ -2158,6 +2192,7 @@
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

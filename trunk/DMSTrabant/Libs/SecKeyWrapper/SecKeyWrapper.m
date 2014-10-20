@@ -181,11 +181,11 @@ static const uint8_t symmetricKeyIdentifier[]	= kSymmetricKeyTag;
 	
 	// Delete the private key.
 	sanityCheck = SecItemDelete((CFDictionaryRef)queryPrivateKey);
-	LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecItemNotFound, @"Error removing private key, OSStatus == %ld.", sanityCheck );
+	LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecItemNotFound, @"Error removing private key, OSStatus == %d.", (int)sanityCheck );
 	
 	// Delete the public key.
 	sanityCheck = SecItemDelete((CFDictionaryRef)queryPublicKey);
-	LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecItemNotFound, @"Error removing public key, OSStatus == %ld.", sanityCheck );
+	LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecItemNotFound, @"Error removing public key, OSStatus == %d.", (int)sanityCheck );
 	
 	[queryPrivateKey release];
 	[queryPublicKey release];
@@ -205,7 +205,7 @@ static const uint8_t symmetricKeyIdentifier[]	= kSymmetricKeyTag;
 	
 	// Delete the symmetric key.
 	sanityCheck = SecItemDelete((CFDictionaryRef)querySymmetricKey);
-	LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecItemNotFound, @"Error removing symmetric key, OSStatus == %ld.", sanityCheck );
+	LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecItemNotFound, @"Error removing symmetric key, OSStatus == %d.", (int)sanityCheck );
 	
 	[querySymmetricKey release];
 	[symmetricKeyRef release];
@@ -216,7 +216,7 @@ static const uint8_t symmetricKeyIdentifier[]	= kSymmetricKeyTag;
 	publicKeyRef = NULL;
 	privateKeyRef = NULL;
 	
-	LOGGING_FACILITY1( keySize == 512 || keySize == 1024 || keySize == 2048, @"%d is an invalid and unsupported key size.", keySize );
+	LOGGING_FACILITY1( keySize == 512 || keySize == 1024 || keySize == 2048, @"%d is an invalid and unsupported key size.", (int)keySize );
 	
 	// First delete current keys.
 	[self deleteAsymmetricKeys];

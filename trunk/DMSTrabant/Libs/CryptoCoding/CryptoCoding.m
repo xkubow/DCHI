@@ -55,7 +55,7 @@ const float CryptoCodingVersion = 1.0f;
     key.length = MAX([key length], CC_MD5_DIGEST_LENGTH);
     for (int i = 0; i < 1024; i++)
     {
-        CC_MD5(key.bytes, key.length, key.mutableBytes);
+        CC_MD5(key.bytes, (uint)key.length, key.mutableBytes);
         [key setLength:CC_MD5_DIGEST_LENGTH];
     }
     key.length = kCCKeySizeAES128;

@@ -7,6 +7,7 @@
 //
 
 #import "SignPDFOperation.h"
+#import "DejalActivityView.h"
 
 @interface SignPDFOperation()
 {
@@ -54,6 +55,7 @@
     // button OK clicked, close the document
     if (buttonIndex == 1) {
         [[[XCASDK_Manager sharedManager] getXCAViewController] dismissViewControllerAnimated:YES completion:nil];
+        [DejalBezelActivityView removeViewAnimated:YES];
     }
 }
 
@@ -69,12 +71,6 @@
 //    return YES;
 }
 
--(BOOL)XCASDK_Operations_DebugActivateFunction:(XCADebugFunction)pDebugFunction {
-//    if (pDebugFunction == kXCADebugFunctionPenInfo) {
-        return YES;//[DemoConfiguration sharedConfiguration].penDebugEnabled;
-//    }
-    return YES;
-}
 
 
 @end

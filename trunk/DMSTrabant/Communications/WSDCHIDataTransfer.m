@@ -20,7 +20,7 @@
 #import "TestFlight.h"
 #import <objc/runtime.h>
 #import "Config.h"
-#import "vcSignificat.h"
+#import "Significat.h"
 
 #define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
 #define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
@@ -909,8 +909,9 @@
         }
         else
             dispatch_async(dispatch_get_main_queue(), ^{
-                vcSignificat *vcSign = [[vcSignificat alloc] init];
-                [ROOTNAVIGATOR presentViewController:vcSign animated:YES completion:nil];
+                Significat *sig = [[Significat alloc] init];
+                [sig openSignificantViewer];
+//                [ROOTNAVIGATOR presentViewController:vcSign animated:YES completion:nil];
             });
     }
 

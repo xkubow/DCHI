@@ -93,7 +93,7 @@
 //    NSString *strSign = NSLocalizedString(@"Sign", "Sign");
 //    NSString *strEmail = NSLocalizedString(@"Email", "Email");
     
-    UIImage *btnImg = [[UIImage imageNamed:@"tlacitko"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 16)];
+//    UIImage *btnImg = [[UIImage imageNamed:@"tlacitko"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 16)];
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:strBack style:UIBarButtonItemStyleBordered target:self action:@selector(loadBack:)];
     [back setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
                                           , NSForegroundColorAttributeName:[UIColor whiteColor]}

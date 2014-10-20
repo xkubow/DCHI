@@ -10,7 +10,6 @@
 #import "TrabantAppDelegate.h"
 #import "DejalActivityView.h"
 #import "DMSetting.h"
-#import "ZoomingPDFViewerViewController.h"
 #import "vcTrabantInfo.h"
 #import "vcNabidky.h"
 #import "vcPDFImageViewver.h"
@@ -378,9 +377,9 @@
 -(void)showProtocol
 {
     [self setStatusOdeslani:YES];
-    UITabBarController *rootTBC = TRABANT_APP_DELEGATE.rootNavController.viewControllers.lastObject;
-    UINavigationController *nc = (UINavigationController *)rootTBC.selectedViewController;
-    UIViewController *vc = nc.viewControllers.lastObject;
+//    UITabBarController *rootTBC = TRABANT_APP_DELEGATE.rootNavController.viewControllers.lastObject;
+//    UINavigationController *nc = (UINavigationController *)rootTBC.selectedViewController;
+    UIViewController *vc = self.navigationController; //nc.viewControllers.lastObject;
 
 //    NSString *pdfFilePAth = [DMSetting sharedDMSetting].pdfReportFilePath;
     
@@ -393,7 +392,7 @@
     UINavigationController *ncPicker = [[UINavigationController alloc] initWithRootViewController:zvc];
     ncPicker.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [ncPicker setModalPresentationStyle:UIModalPresentationFormSheet];
-    [nc presentViewController:ncPicker animated:YES completion:nil];
+    [self presentViewController:ncPicker animated:YES completion:nil];
     ncPicker.preferredContentSize = CGSizeMake(1000, 680);
     ncPicker.view.superview.center = CGPointMake(vc.view.superview.center.x, vc.view.superview.center.y);
     [self EnabledAllComponents:YES];

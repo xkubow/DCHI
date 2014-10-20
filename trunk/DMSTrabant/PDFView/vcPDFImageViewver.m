@@ -26,6 +26,7 @@
     UIDocumentInteractionController *_documentInteractionController;
     UIBarButtonItem *_btnServerPrint;
     UIBarButtonItem *_btnAirPrint;
+    BOOL loadNavBar;
 }
 @end
 
@@ -35,8 +36,8 @@
 {
     self = [super initWithNibName:@"vcPDFImageViewver" bundle:[NSBundle mainBundle]];
     if (self) {
-            self.view.frame = CGRectMake(0, 0, 1000, 700);
-            [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
+//            self.view.frame = CGRectMake(0, 0, 1000, 700);
+//            [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
     }
     return self;
 }
@@ -55,14 +56,19 @@
     svImage.zoomScale = 1.0;
     svImage.maximumZoomScale = 10.0;
     svImage.minimumZoomScale = 1.0;
-    
+    loadNavBar = YES;
 }
 
 
 - (void) setNavigationBar
 {
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
+    if(loadNavBar)
+        loadNavBar = NO;
+    else
+        return;
     
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+
     CGRect nr = self.navigationController.navigationBar.frame;
     UIImage *img = [UIImage imageNamed:@"alu_texture_navigation.png"];
     
@@ -88,35 +94,25 @@
 
     
     NSString *strBack = NSLocalizedString(@"Back", nil);
-//    NSString *strAirPrint = NSLocalizedString(@"AirPrint", nil);
-//    NSString *strServerPrint = NSLocalizedString(@"Server print", nil);
-//    NSString *strSign = NSLocalizedString(@"Sign", "Sign");
-//    NSString *strEmail = NSLocalizedString(@"Email", "Email");
-    
-//    UIImage *btnImg = [[UIImage imageNamed:@"tlacitko"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 16)];
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:strBack style:UIBarButtonItemStyleBordered target:self action:@selector(loadBack:)];
     [back setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
                                           , NSForegroundColorAttributeName:[UIColor whiteColor]}
                               forState:UIControlStateNormal];
     [back setTintColor:[UIColor whiteColor]];
     
-    _btnAirPrint = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(airPrintContent:)];
-    [_btnAirPrint setImage:[UIImage imageNamed:@"airprinter.png"]];
+    _btnAirPrint = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"airprinter.png"] style:UIBarButtonItemStylePlain target:self action:@selector(airPrintContent:)];
     [_btnAirPrint setTintColor:[UIColor whiteColor]];
     
-    _btnServerPrint = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(serverPrintContent:)];
-    [_btnServerPrint setImage:[UIImage imageNamed:@"printer.png"]];
+    _btnServerPrint = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"printer.png"] style:UIBarButtonItemStylePlain target:self action:@selector(serverPrintContent:)];
     [_btnServerPrint setTintColor:[UIColor whiteColor]];
     
-    UIBarButtonItem *btnSign = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(sign:)];
-    [btnSign setImage:[UIImage imageNamed:@"sign.png"]];
+    UIBarButtonItem *btnSign = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sign.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sign:)];
     [btnSign setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem *btnOpenIn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(openIn:)];
     [btnOpenIn setTintColor:[UIColor whiteColor]];
     
-    UIBarButtonItem *btnEmail = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(sendEmail:)];
-    [btnEmail setImage:[UIImage imageNamed:@"mail.png"]];
+    UIBarButtonItem *btnEmail = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"mail.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sendEmail:)];
     [btnEmail setTintColor:[UIColor whiteColor]];
     
     [self.navigationItem setLeftBarButtonItems:@[back, btnSign, btnEmail]];
@@ -128,9 +124,15 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self setNavigationBar];
+//    [self setNavigationBar];
 //    if([self navigationController])
 //        [[TRABANT_APP_DELEGATE rootNavController] setNavigationBar:self];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self setNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning

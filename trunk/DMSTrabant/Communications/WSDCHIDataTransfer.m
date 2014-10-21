@@ -769,8 +769,9 @@
 
         else
             [DMSetting sharedDMSetting].pakety = nil;
-
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"dataRespondNotification" object:@"GetWPForCheckIn"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"dataRespondNotification" object:@"GetWPForCheckIn"];
+        });
         return;
     }
     else if([action isEqualToString:@"GetStaticData"])
@@ -781,11 +782,7 @@
         if(updateDate.length == 0)
             updateDate = @"01 Sep 2000 12:12:12 GMT";
         
-        // parse the JSON string into an object - assuming [response asString] is a NSString of JSON data
         mdDBStaticData = [parser objectWithString:request.responseString error:nil];
-//        NSString *staticData = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"/staticData"];
-//        [mdDBStaticData writeToFile:staticData atomically:YES];
-        
         [DejalBezelActivityView currentActivityView].progressView.progress += progresBig.floatValue;
         loadedDB |= 1;
         

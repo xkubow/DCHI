@@ -13,6 +13,8 @@
 #import "vcTrabantInfo.h"
 #import "vcNabidky.h"
 #import "vcPDFImageViewver.h"
+#import "vcSplitView.h"
+#import "tbcBarController.h"
 
 #define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
 #define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
@@ -369,24 +371,26 @@
         [self setStatusOdeslani:YES];
         [self refreshData];
         [self showProtocol];
+    } else if([notification.object isEqualToString:@"GetWPForCheckIn"])
+    {
+        [self refreshWPData];
     }
     [self EnabledAllComponents:YES];
     NSLog(@"data changet done ");
 }
 
+-(void) refreshWPData
+{
+    if(self.tabBarController.selectedIndex != 2)
+        ((tbcBarController *)self.tabBarController).reloadData = YES;
+}
+
 -(void)showProtocol
 {
     [self setStatusOdeslani:YES];
-//    UITabBarController *rootTBC = TRABANT_APP_DELEGATE.rootNavController.viewControllers.lastObject;
-//    UINavigationController *nc = (UINavigationController *)rootTBC.selectedViewController;
-    UIViewController *vc = self.navigationController; //nc.viewControllers.lastObject;
-
-//    NSString *pdfFilePAth = [DMSetting sharedDMSetting].pdfReportFilePath;
+    UIViewController *vc = self.navigationController;
     
     vcPDFImageViewver *zvc = [[vcPDFImageViewver alloc] init];
-//    [zvc.view setFrame:CGRectMake(0,0,1000, 700)];
-    
-//    ZoomingPDFViewerViewController *zvc = [[ZoomingPDFViewerViewController alloc] initWithNibName:@"ZoomingPDFViewerViewController" bundle:[NSBundle mainBundle] PDFData:pdfData];
     [zvc setModalPresentationStyle:UIModalPresentationFormSheet];
     
     UINavigationController *ncPicker = [[UINavigationController alloc] initWithRootViewController:zvc];

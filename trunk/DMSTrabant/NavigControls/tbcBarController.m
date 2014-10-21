@@ -100,8 +100,7 @@
     return YES;
 }
 // User tapped on an item...
-- (void)tabBarController:(UITabBarController *)tabBarController 
- didSelectViewController:(UIViewController *)viewController
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
 
     if(tabBarController.selectedIndex == 2)

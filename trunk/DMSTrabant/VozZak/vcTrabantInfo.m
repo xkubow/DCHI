@@ -488,6 +488,11 @@
                                                         message:NSLocalizedString(@"StaticDataUpdate", nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
+    else if([notification.object isEqualToString:@"GetWPForCheckIn"])
+    {
+        NSLog(@"%@", ROOTNAVIGATOR.presentedViewController);
+        
+    }
         
 }
 

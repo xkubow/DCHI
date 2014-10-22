@@ -26,6 +26,7 @@
 
 @implementation tbcBarController
 @synthesize reloadData=_reloadData;
+@synthesize reloadPackets=_reloadPackets;
 
 - (void)viewDidLoad
 {
@@ -112,9 +113,13 @@
 - (void) nastavSplitView
 {
 
-    if(_reloadData)
+    if(_reloadData){
         [vc reloadData];
-    _reloadData = NO;
+        _reloadData = NO;
+    }
+    else if(_reloadPackets) {
+        _reloadPackets = NO;
+    }
 
 }
 

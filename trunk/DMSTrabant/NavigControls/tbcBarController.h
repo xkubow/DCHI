@@ -15,5 +15,6 @@
 }
 
 @property (nonatomic, readwrite) BOOL reloadData;
+@property (nonatomic, readwrite) BOOL reloadPackets;
 
 @end

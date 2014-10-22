@@ -169,11 +169,7 @@
 		E9D369B417008E62008D73B8 /* vcPoznamka.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D3695D17008E61008D73B8 /* vcPoznamka.xib */; };
 		E9D369B517008E62008D73B8 /* vcShowInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3695F17008E61008D73B8 /* vcShowInfo.m */; };
 		E9D369B617008E62008D73B8 /* vcVozHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3696117008E61008D73B8 /* vcVozHistory.m */; };
-		E9D369B717008E62008D73B8 /* PDFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3696417008E61008D73B8 /* PDFScrollView.m */; };
-		E9D369B817008E62008D73B8 /* TiledPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3696617008E61008D73B8 /* TiledPDFView.m */; };
 		E9D369B917008E62008D73B8 /* vcServerPrinters.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3696817008E61008D73B8 /* vcServerPrinters.m */; };
-		E9D369BB17008E62008D73B8 /* ZoomingPDFViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3696C17008E61008D73B8 /* ZoomingPDFViewerViewController.m */; };
-		E9D369BC17008E62008D73B8 /* ZoomingPDFViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D3696D17008E61008D73B8 /* ZoomingPDFViewerViewController.xib */; };
 		E9D369BD17008E62008D73B8 /* vcTrabantPictures.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3697017008E61008D73B8 /* vcTrabantPictures.m */; };
 		E9D369BE17008E62008D73B8 /* vcTrabantPictures.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D3697117008E61008D73B8 /* vcTrabantPictures.xib */; };
 		E9D369BF17008E62008D73B8 /* DBSiluets.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3697417008E61008D73B8 /* DBSiluets.m */; };
@@ -538,15 +534,8 @@
 		E9D3695F17008E61008D73B8 /* vcShowInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcShowInfo.m; sourceTree = "<group>"; };
 		E9D3696017008E61008D73B8 /* vcVozHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcVozHistory.h; sourceTree = "<group>"; };
 		E9D3696117008E61008D73B8 /* vcVozHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcVozHistory.m; sourceTree = "<group>"; };
-		E9D3696317008E61008D73B8 /* PDFScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFScrollView.h; sourceTree = "<group>"; };
-		E9D3696417008E61008D73B8 /* PDFScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFScrollView.m; sourceTree = "<group>"; };
-		E9D3696517008E61008D73B8 /* TiledPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledPDFView.h; sourceTree = "<group>"; };
-		E9D3696617008E61008D73B8 /* TiledPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledPDFView.m; sourceTree = "<group>"; };
 		E9D3696717008E61008D73B8 /* vcServerPrinters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcServerPrinters.h; sourceTree = "<group>"; };
 		E9D3696817008E61008D73B8 /* vcServerPrinters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcServerPrinters.m; sourceTree = "<group>"; };
-		E9D3696B17008E61008D73B8 /* ZoomingPDFViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomingPDFViewerViewController.h; sourceTree = "<group>"; };
-		E9D3696C17008E61008D73B8 /* ZoomingPDFViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomingPDFViewerViewController.m; sourceTree = "<group>"; };
-		E9D3696D17008E61008D73B8 /* ZoomingPDFViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomingPDFViewerViewController.xib; sourceTree = "<group>"; };
 		E9D3696F17008E61008D73B8 /* vcTrabantPictures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcTrabantPictures.h; sourceTree = "<group>"; };
 		E9D3697017008E61008D73B8 /* vcTrabantPictures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcTrabantPictures.m; sourceTree = "<group>"; };
 		E9D3697117008E61008D73B8 /* vcTrabantPictures.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vcTrabantPictures.xib; sourceTree = "<group>"; };
@@ -1239,16 +1228,9 @@
 			isa = PBXGroup;
 			children = (
 				E99ADC8219E53F390009774C /* Signing */,
-				E9D3696317008E61008D73B8 /* PDFScrollView.h */,
-				E9D3696417008E61008D73B8 /* PDFScrollView.m */,
-				E9D3696517008E61008D73B8 /* TiledPDFView.h */,
-				E9D3696617008E61008D73B8 /* TiledPDFView.m */,
 				E9D3696717008E61008D73B8 /* vcServerPrinters.h */,
 				E9D3696817008E61008D73B8 /* vcServerPrinters.m */,
 				E9E67E3D1744D33E00BC27A0 /* vcServerPrinters.xib */,
-				E9D3696B17008E61008D73B8 /* ZoomingPDFViewerViewController.h */,
-				E9D3696C17008E61008D73B8 /* ZoomingPDFViewerViewController.m */,
-				E9D3696D17008E61008D73B8 /* ZoomingPDFViewerViewController.xib */,
 				E92F874019BEEFD20080535E /* vcEmail.h */,
 				E92F874119BEEFD20080535E /* vcEmail.m */,
 				E92F874319BEF11A0080535E /* vcEmail.xib */,
@@ -1725,7 +1707,6 @@
 				E9D3699117008E62008D73B8 /* ASIHTTPRequest.m.backup in Resources */,
 				E9D369AE17008E62008D73B8 /* vcNabidky.xib in Resources */,
 				E9D369B417008E62008D73B8 /* vcPoznamka.xib in Resources */,
-				E9D369BC17008E62008D73B8 /* ZoomingPDFViewerViewController.xib in Resources */,
 				E9D369BE17008E62008D73B8 /* vcTrabantPictures.xib in Resources */,
 				E9D369C317008E62008D73B8 /* vcTrabantinfo.xib in Resources */,
 				E9D369C817008E62008D73B8 /* vcSluzbyPicker.xib in Resources */,
@@ -1869,12 +1850,9 @@
 				E9D369B317008E62008D73B8 /* vcPoznamka.m in Sources */,
 				E9D369B517008E62008D73B8 /* vcShowInfo.m in Sources */,
 				E9D369B617008E62008D73B8 /* vcVozHistory.m in Sources */,
-				E9D369B717008E62008D73B8 /* PDFScrollView.m in Sources */,
 				E9D6D8B119DED88300BF6E5A /* IASKAppSettingsWebViewController.m in Sources */,
-				E9D369B817008E62008D73B8 /* TiledPDFView.m in Sources */,
 				E9D369B917008E62008D73B8 /* vcServerPrinters.m in Sources */,
 				E9D6D8A819DED88300BF6E5A /* CXMLNode_XPathExtensions.m in Sources */,
-				E9D369BB17008E62008D73B8 /* ZoomingPDFViewerViewController.m in Sources */,
 				E9D369BD17008E62008D73B8 /* vcTrabantPictures.m in Sources */,
 				E9D369BF17008E62008D73B8 /* DBSiluets.m in Sources */,
 				E9D6D89E19DED88300BF6E5A /* CXMLNode_CreationExtensions.m in Sources */,
@@ -1992,7 +1970,6 @@
 		311AFF6014E9930200118B04 /* Ad Hoc Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2111,7 +2088,6 @@
 		8B0B502114B7A4CD00DA14A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2155,7 +2131,6 @@
 		8B0B502214B7A4CD00DA14A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";

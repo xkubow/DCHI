@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "vcBase.h"
 
-typedef enum {eVYBAVATEXT=1, eCELKYODLOZBTN, eCELKYSLUZBABTN, eCELKYPOZAD, eCELKYPC, eSLUZBAPC, eBTNCLEARROW, eOKBTN, eDETAILTEXT} cellContentType;
+typedef enum {eVYBAVATEXT=1, eCELKYODLOZBTN, eCELKYSLUZBABTN, eCELKYPOZAD, eCELKYPC, eSLUZBAPC, eBTNCLEARROW, eOKBTN, eDETAILTEXT, eDETAIL} cellContentType;
 
 @interface tvDetail : UITableView
 

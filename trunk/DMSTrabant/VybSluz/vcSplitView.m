@@ -10,6 +10,7 @@
 #import "tvMaster.h"
 #import "DMSetting.h"
 #import "TrabantAppDelegate.h"
+#import "DejalActivityView.h"
 
 #define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
 #define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
@@ -88,7 +89,11 @@
 {
     [super viewWillDisappear:animated];
 }
-
+-(void) refreshWPData
+{
+    [masterData removeLastObject];
+    [self setPakety];
+}
 -(void) reloadData
 {
     [masterData removeAllObjects];
@@ -143,14 +148,19 @@
     [masterData addObject:[DMSetting sharedDMSetting].celky];
     [detailData addObjectsFromArray:[DMSetting sharedDMSetting].casti ];
     
+    [self setPakety];
+    
+}
+
+-(void)setPakety
+{
     self.filteredPacketArray = [DMSetting sharedDMSetting].pakety;
     
     [masterData addObject:[self setPaketyMaster]];
     [masterTableView reloadData];
-    [dmDetail setDataType:eVYBAVY];
+//    [dmDetail setDataType:eVYBAVY];
     dmDetail.detailData = nil;
     [detailTableView reloadData];
-    
 }
 
 -(NSMutableArray *)setPaketyMaster

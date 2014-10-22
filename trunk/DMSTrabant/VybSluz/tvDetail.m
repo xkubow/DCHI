@@ -224,6 +224,8 @@
         case eDTNABIDKY:
             [self sluzbaDidSelect:indexPath];
             break;
+        case ePAKETY:
+            break;
             //        case eCELKY:
             //            [self celkyDidSelect:indexPath];
             //            break;
@@ -232,6 +234,10 @@
     }
     
     [_baseView performSelector:@selector(setStatusOdeslani:) withObject:self];
+}
+
+-(void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 #pragma mark - nastavenie VYBAV
@@ -286,7 +292,7 @@
 - (void) setPaketyCells:(UITableViewCell*) cell
 {
     cell.accessoryType = UITableViewCellAccessoryNone;
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;//UITableViewCellSelectionStyleNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor colorWithRed:(119.0/255.0) green:(156.0/255.0) blue:(164.0/255.0) alpha:1.0]; // perfect color suggested by @mohamadHafez
@@ -302,8 +308,9 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [btn addTarget:self action:@selector(packetInfoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    btn.adjustsImageWhenHighlighted = YES;
     btn.tintColor = [UIColor colorWithRed:0.471 green:0.612 blue:0.639 alpha:1];
+    btn.adjustsImageWhenHighlighted = YES;
+    btn.tag = eDETAIL;
     cell.accessoryView = btn;
     
     btn = [[UIButton alloc] initWithFrame:CGRectMake(r.size.width - 90, 5, 44, 44)];

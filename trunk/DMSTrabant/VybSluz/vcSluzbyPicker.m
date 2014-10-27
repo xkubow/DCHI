@@ -62,7 +62,11 @@
     packetGreenE = [UIImage imageNamed:@"packet_green_E"];
     packetOrange = [UIImage imageNamed:@"packet_orange"];
     packetOrangeE = [UIImage imageNamed:@"packet_orange_E"];
-    // Do any additional setup after loading the view from its nib.
+    
+    if([tvServices respondsToSelector:@selector(setSeparatorInset:)]) {
+        [tvServices setSeparatorInset:UIEdgeInsetsZero];
+        tvServices.layoutMargins = UIEdgeInsetsZero;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -82,16 +86,16 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     
     CGRect r = self.navigationController.navigationBar.frame;
-    UILabel *_lblNavBar = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, nr.size.width, r.size.height)];
+    UILabel *_lblNavBar = [Rezident setNavigationTitle:CGRectMake(0, 0, nr.size.width, r.size.height)];//[[UILabel alloc] initWithFrame:CGRectMake(0, 0, nr.size.width, r.size.height)];
     _lblNavBar.text = self.title;//@"aqdqwdwefasdfgqefqewf";
-    _lblNavBar.lineBreakMode = NSLineBreakByTruncatingTail;
-    _lblNavBar.backgroundColor = [UIColor clearColor];
-    _lblNavBar.textColor = [UIColor whiteColor];
-    _lblNavBar.font = [UIFont fontWithName:@"Verdana" size:25 ];
-    _lblNavBar.textAlignment = NSTextAlignmentCenter;
-    _lblNavBar.clipsToBounds = NO;
-    _lblNavBar.numberOfLines = 0;
-    _lblNavBar.adjustsFontSizeToFitWidth = NO;
+//    _lblNavBar.lineBreakMode = NSLineBreakByTruncatingTail;
+//    _lblNavBar.backgroundColor = [UIColor clearColor];
+//    _lblNavBar.textColor = [UIColor whiteColor];
+//    _lblNavBar.font = [UIFont fontWithName:@"Verdana" size:25 ];
+//    _lblNavBar.textAlignment = NSTextAlignmentCenter;
+//    _lblNavBar.clipsToBounds = NO;
+//    _lblNavBar.numberOfLines = 0;
+//    _lblNavBar.adjustsFontSizeToFitWidth = NO;
     self.navigationItem.titleView = _lblNavBar;
     
     myNumKeyboard = [[vNumKeyboard alloc] initWithNibName:@"vNumKeyboard" bundle:[NSBundle mainBundle] label:lblPC];
@@ -171,6 +175,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.layoutMargins = UIEdgeInsetsZero;
         
         [cell.textLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:17]];
         cell.textLabel.highlightedTextColor = [UIColor whiteColor];

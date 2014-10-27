@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "vcMenu.h"
 #import "vcPoznamka.h"
+//#import "Rezident.h"
 
 typedef enum {eBASEVIEW=111, eSPONA=112} viewEnums;
-
-@interface NAVLabel : UILabel
-
-@end
 
 
 @interface vcBase : UIViewController {
@@ -32,7 +29,7 @@ typedef enum {eBASEVIEW=111, eSPONA=112} viewEnums;
 
 @property (nonatomic, assign) BOOL enableSave;
 @property (nonatomic, retain)UIButton *btnSaveInfo;
-@property (nonatomic, retain)NAVLabel *lblNavBar;
+@property (nonatomic, retain)UILabel *lblNavBar;
 
 - (void) EnabledAllComponents:(BOOL)newEnable;
 - (NSString *)parseXML;

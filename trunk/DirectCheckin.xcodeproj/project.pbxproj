@@ -81,8 +81,6 @@
 		E9B4B4D3199CC0D200EAC49E /* tag_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B4B4CF199CC0D200EAC49E /* tag_orange.png */; };
 		E9B4B4D4199CC0D200EAC49E /* tag_green.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B4B4D0199CC0D200EAC49E /* tag_green.png */; };
 		E9B4B4D8199D0A1200EAC49E /* Info_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B4B4D7199D0A1200EAC49E /* Info_icon.png */; };
-		E9B75FB9183A297C007E8BE9 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B75FB8183A297C007E8BE9 /* Default-Landscape@2x~ipad.png */; };
-		E9B75FBB183A31A6007E8BE9 /* ikona_iPad_144.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B75FBA183A31A6007E8BE9 /* ikona_iPad_144.png */; };
 		E9BC1C0F199CAD40000C0318 /* vcPaketInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BC1C06199CAD40000C0318 /* vcPaketInfo.m */; };
 		E9BC1C10199CAD40000C0318 /* vcPaketInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BC1C08199CAD40000C0318 /* vcPaketInfo.xib */; };
 		E9BC1C11199CAD40000C0318 /* tvcNDPacketInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BC1C0A199CAD40000C0318 /* tvcNDPacketInfo.xib */; };
@@ -391,8 +389,6 @@
 		E9B6E4EA175F6EA80072BD73 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E9B6E4EB175F6EA80072BD73 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E9B6E4EC175F6EA80072BD73 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E9B75FB8183A297C007E8BE9 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		E9B75FBA183A31A6007E8BE9 /* ikona_iPad_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikona_iPad_144.png; sourceTree = "<group>"; };
 		E9BC1C06199CAD40000C0318 /* vcPaketInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcPaketInfo.m; sourceTree = "<group>"; };
 		E9BC1C07199CAD40000C0318 /* vcPaketInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcPaketInfo.h; sourceTree = "<group>"; };
 		E9BC1C08199CAD40000C0318 /* vcPaketInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vcPaketInfo.xib; sourceTree = "<group>"; };
@@ -754,8 +750,6 @@
 		8B0B4FF714B7A4CD00DA14A8 = {
 			isa = PBXGroup;
 			children = (
-				E9B75FBA183A31A6007E8BE9 /* ikona_iPad_144.png */,
-				E9B75FB8183A297C007E8BE9 /* Default-Landscape@2x~ipad.png */,
 				8B0B501514B7A4CD00DA14A8 /* TrabantAppDelegate.h */,
 				8B0B501614B7A4CD00DA14A8 /* TrabantAppDelegate.m */,
 				8B0B500C14B7A4CD00DA14A8 /* Trabant */,
@@ -1725,8 +1719,6 @@
 				E9BFDDB817C60173005E654B /* caption_bg.png in Resources */,
 				E9EC81C01817FDE30055DF3D /* README.md in Resources */,
 				E9EC81C11817FDE30055DF3D /* release_notes.md in Resources */,
-				E9B75FB9183A297C007E8BE9 /* Default-Landscape@2x~ipad.png in Resources */,
-				E9B75FBB183A31A6007E8BE9 /* ikona_iPad_144.png in Resources */,
 				E9BC1C10199CAD40000C0318 /* vcPaketInfo.xib in Resources */,
 				E9BC1C11199CAD40000C0318 /* tvcNDPacketInfo.xib in Resources */,
 				E9B4B4CA199CB34200EAC49E /* tvcPPPacketInfo.xib in Resources */,
@@ -1970,10 +1962,11 @@
 		311AFF6014E9930200118B04 /* Ad Hoc Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: T-Systems Czech Republic a.s. (768LZ92V99)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: T-Systems Czech Republic a.s. (768LZ92V99)";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2003,8 +1996,8 @@
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "80d4a3eb-4b7b-4929-934f-14cf3686703d";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "80d4a3eb-4b7b-4929-934f-14cf3686703d";
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";
@@ -2088,6 +2081,7 @@
 		8B0B502114B7A4CD00DA14A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2119,7 +2113,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "80d4a3eb-4b7b-4929-934f-14cf3686703d";
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";
@@ -2131,10 +2125,11 @@
 		8B0B502214B7A4CD00DA14A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/DMSTrabant/Libs",
@@ -2162,8 +2157,8 @@
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "80d4a3eb-4b7b-4929-934f-14cf3686703d";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "80d4a3eb-4b7b-4929-934f-14cf3686703d";
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";

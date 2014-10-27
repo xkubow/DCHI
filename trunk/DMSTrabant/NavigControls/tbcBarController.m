@@ -68,7 +68,7 @@
     tp.enableSave = YES;
     nab.enableSave = NO;
     
-    self.tabBar.tintColor = [UIColor colorWithRed:(76.0/255.0) green:(161.0/255.0) blue:(255.0/255.0) alpha:1.0];
+    self.tabBar.tintColor = [UIColor colorWithRed:155.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];//[UIColor colorWithRed:(76.0/255.0) green:(161.0/255.0) blue:(255.0/255.0) alpha:1.0];
       
 	// Do any additional setup after loading the view.
 }
@@ -117,6 +117,7 @@
         _reloadData = NO;
     }
     else if(_reloadPackets) {
+        [vc setPakety];
         _reloadPackets = NO;
     }
 

@@ -16,6 +16,7 @@
                                       onPlace: 		(XCAControlPlace)  	pXCAPlace
                            withIdentification: 		(NSString *)  	pXCAIdentification
 {
+    NSLog(@"%@", pCocoaControl);
     
 }
 
@@ -43,9 +44,9 @@
     NSLog(@"wants value for %@", pPreferenceKey);
     NSString *result = nil;
     
-    //    if (NSOrderedSame == [pPreferenceKey compare:@"server_address_v1"]) {
-    result = @"http://10.219.61.104:57003";
-    //    }
+    if (NSOrderedSame == [pPreferenceKey compare:@"server_address_v1"]) {
+        result = @"http://10.219.61.104:57003";
+    }
     NSLog(@"returning value %@", result);
     return result;
 }

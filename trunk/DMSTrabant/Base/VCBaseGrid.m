@@ -252,16 +252,8 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
 
     CGRect r = self.navigationController.navigationBar.frame;
-    BaseNavBarTitle *_lblNavBar = [[BaseNavBarTitle alloc] initWithFrame:CGRectMake(0, 0, viewFrame.size.width, r.size.height)];
+    UILabel *_lblNavBar = [Rezident setNavigationTitle:CGRectMake(0, 0, viewFrame.size.width, r.size.height)];
     _lblNavBar.text = _viewTitle;
-    _lblNavBar.lineBreakMode = NSLineBreakByTruncatingTail;
-    _lblNavBar.backgroundColor = [UIColor clearColor];
-    _lblNavBar.textColor = [UIColor whiteColor];
-    _lblNavBar.font = [UIFont fontWithName:@"Verdana" size:25 ];
-    _lblNavBar.textAlignment = NSTextAlignmentCenter;
-    _lblNavBar.clipsToBounds = NO;
-    _lblNavBar.numberOfLines = 0;
-    _lblNavBar.adjustsFontSizeToFitWidth = NO;
     self.navigationItem.titleView = _lblNavBar;
     
     UIImage *btnImg = [[UIImage imageNamed:@"tlacitko"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 16)];

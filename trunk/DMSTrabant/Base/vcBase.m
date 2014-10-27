@@ -20,14 +20,14 @@
 #define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
 
 
-@implementation NAVLabel
-
-- (void) setFrame:(CGRect)frame
-{
-    [super setFrame:frame];//CGRectMake(212, 10, 600, 25)];
-}
-
-@end
+//@implementation NAVLabel
+//
+//- (void) setFrame:(CGRect)frame
+//{
+//    [super setFrame:CGRectMake(212, 10, 600, 20)];
+//}
+//
+//@end
 
 
 
@@ -298,22 +298,15 @@
 
 -(void) loadNavBar
 {
-    if(_lblNavBar == nil)
-    {
-        _lblNavBar = [[NAVLabel alloc] initWithFrame:CGRectMake(0, 0, 600, 25)];
+
+    if(_lblNavBar == nil){
+        CGRect r = self.navigationController.navigationBar.frame;
+        _lblNavBar = [Rezident setNavigationTitle:CGRectMake(0, 0, self.view.frame.size.width, r.size.height)];
+//        _lblNavBar = [Rezident setNavigationTitle:CGRectMake(212, 10, 600, 20)];
         _lblNavBar.text = ROOTNAVIGATOR.vozCaption;
-        _lblNavBar.lineBreakMode = NSLineBreakByTruncatingTail;
-        _lblNavBar.backgroundColor = [UIColor clearColor];
-        _lblNavBar.textColor = [UIColor whiteColor];
-        _lblNavBar.font = [UIFont fontWithName:@"Verdana" size:25 ];
-        _lblNavBar.textAlignment = NSTextAlignmentCenter;
-        _lblNavBar.clipsToBounds = NO;
-        _lblNavBar.numberOfLines = 0;
-        _lblNavBar.adjustsFontSizeToFitWidth = NO;
         self.navigationItem.titleView = _lblNavBar;
     }
-    
-    
+
     btnNavBarSave = [[UIBarButtonItem alloc] initWithCustomView:btnSaveInfo];
     btnNavBarSave.tag = 12;
     
@@ -329,7 +322,7 @@
     
     localizedStr = NSLocalizedString(@"LogOff btn", @"tlacitko odhlasenia");
     btnNavleft = [[UIBarButtonItem alloc] initWithTitle:localizedStr style:UIBarButtonItemStyleBordered target:self action:@selector(btnLeftClick:)];
-    [btnNavleft setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
+     [btnNavleft setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
                                            , NSForegroundColorAttributeName:[UIColor whiteColor]}
                                forState:UIControlStateNormal];
     [btnNavleft setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
@@ -382,7 +375,7 @@
 -(void) refreshWPData
 {
     if(self.tabBarController.selectedIndex != 2)
-        ((tbcBarController *)self.tabBarController).reloadData = YES;
+        ((tbcBarController *)self.tabBarController).reloadPackets = YES;
 }
 
 -(void)showProtocol

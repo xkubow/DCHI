@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -64,7 +64,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Pohledy" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="10">
-                            <rect key="frame" x="20" y="413" width="127" height="20"/>
+                            <rect key="frame" x="20" y="410" width="127" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="127" id="by2-pH-JFC"/>
@@ -89,7 +89,7 @@
                             </connections>
                         </segmentedControl>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Exteriér" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8">
-                            <rect key="frame" x="508" y="413" width="127" height="20"/>
+                            <rect key="frame" x="508" y="410" width="127" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="127" id="OoF-Wr-dzE"/>
@@ -114,7 +114,7 @@
                             </connections>
                         </segmentedControl>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Oděrky" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6">
-                            <rect key="frame" x="793" y="413" width="92" height="20"/>
+                            <rect key="frame" x="800" y="410" width="92" height="20"/>
                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                             <color key="textColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -133,7 +133,7 @@
                             <size key="shadowOffset" width="1" height="1"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                            <rect key="frame" x="793" y="432" width="51" height="31"/>
+                            <rect key="frame" x="807" y="432" width="51" height="31"/>
                             <color key="tintColor" red="0.47058826684951782" green="0.61176472902297974" blue="0.63921570777893066" alpha="1" colorSpace="deviceRGB"/>
                             <color key="onTintColor" red="0.46666669849999998" green="0.61176472900000001" blue="0.64313727620000005" alpha="1" colorSpace="deviceRGB"/>
                         </switch>
@@ -156,7 +156,7 @@
                     <constraints>
                         <constraint firstItem="13" firstAttribute="centerY" secondItem="12" secondAttribute="centerY" id="49P-hb-4uS"/>
                         <constraint firstItem="14" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="1" id="5wa-O6-jme"/>
-                        <constraint firstItem="5" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="26" id="6La-bA-BCU"/>
+                        <constraint firstItem="5" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="40" id="6La-bA-BCU"/>
                         <constraint firstItem="7" firstAttribute="leading" secondItem="9" secondAttribute="trailing" constant="31" id="6oZ-mj-sfy"/>
                         <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="2" id="APy-cJ-zak"/>
                         <constraint firstItem="109" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" symbolic="YES" id="C00-ob-tt3"/>
@@ -165,16 +165,16 @@
                         <constraint firstItem="10" firstAttribute="baseline" secondItem="8" secondAttribute="baseline" id="HMi-AW-ZHL"/>
                         <constraint firstItem="6" firstAttribute="top" secondItem="8" secondAttribute="top" id="ICP-KU-hXh"/>
                         <constraint firstItem="124" firstAttribute="top" secondItem="4" secondAttribute="top" constant="6" id="J4A-mv-S1s"/>
-                        <constraint firstItem="11" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="25" id="Omk-Rx-rTY"/>
+                        <constraint firstItem="11" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="18" id="Omk-Rx-rTY"/>
                         <constraint firstItem="7" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="25" id="Plv-Nf-4Hj"/>
                         <constraint firstItem="13" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="5" id="RcQ-3j-MUl"/>
                         <constraint firstItem="14" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="SvJ-0A-0Gk"/>
                         <constraint firstItem="14" firstAttribute="top" secondItem="109" secondAttribute="bottom" constant="14" id="Tky-dx-3Hb"/>
                         <constraint firstItem="13" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="22" id="UP3-VM-ivi"/>
                         <constraint firstItem="10" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" id="Uja-xT-J6A"/>
-                        <constraint firstItem="11" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="68" id="YCy-5N-unz"/>
-                        <constraint firstItem="6" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="Yhh-66-05N"/>
-                        <constraint firstItem="10" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="4" id="afa-L0-O3b"/>
+                        <constraint firstItem="11" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="54" id="YCy-5N-unz"/>
+                        <constraint firstItem="6" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="-7" id="Yhh-66-05N"/>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="1" id="afa-L0-O3b"/>
                         <constraint firstItem="3" firstAttribute="top" secondItem="4" secondAttribute="top" id="diB-hJ-OWt"/>
                         <constraint firstItem="6" firstAttribute="baseline" secondItem="8" secondAttribute="baseline" id="fcb-cW-3sH"/>
                         <constraint firstItem="109" firstAttribute="top" secondItem="4" secondAttribute="top" constant="7" id="gOX-z2-qnu"/>
@@ -187,7 +187,7 @@
                         <constraint firstItem="12" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="6" id="qBI-fo-VWb"/>
                         <constraint firstItem="12" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="14" id="sHW-ZH-TDx"/>
                         <constraint firstItem="13" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="13" id="sn1-O9-ie8"/>
-                        <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="1" id="u1k-jF-jMJ"/>
+                        <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="4" id="u1k-jF-jMJ"/>
                         <constraint firstItem="12" firstAttribute="centerX" secondItem="13" secondAttribute="centerX" id="uEs-lG-1vT"/>
                         <constraint firstItem="14" firstAttribute="top" secondItem="124" secondAttribute="bottom" constant="6" id="usY-h8-Uv5"/>
                         <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" constant="20" symbolic="YES" id="wJK-sD-PR7"/>

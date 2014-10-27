@@ -18,5 +18,6 @@
 
 
 -(void) reloadData;
+-(void) setPakety;
 
 @end

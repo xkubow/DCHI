@@ -12,5 +12,6 @@
 
 + (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 + (UITableViewCell *) finTableViewCell:(id)obj;
++(UILabel *)setNavigationTitle:(CGRect)rect;
 
 @end

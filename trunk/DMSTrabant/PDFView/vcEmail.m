@@ -90,16 +90,9 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     
     CGRect r = self.navigationController.navigationBar.frame;
-    UILabel *_lblNavBar = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, nr.size.width, r.size.height)];
+    UILabel *_lblNavBar = [Rezident setNavigationTitle:CGRectMake(0, 0, nr.size.width, r.size.height)];
     _lblNavBar.text = NSLocalizedString(@"Odoslanie emailu", nil);
-    _lblNavBar.lineBreakMode = NSLineBreakByTruncatingTail;
-    _lblNavBar.backgroundColor = [UIColor clearColor];
-    _lblNavBar.textColor = [UIColor whiteColor];
-    _lblNavBar.font = [UIFont fontWithName:@"Verdana" size:25 ];
-    _lblNavBar.textAlignment = NSTextAlignmentCenter;
-    _lblNavBar.clipsToBounds = NO;
-    _lblNavBar.numberOfLines = 0;
-    _lblNavBar.adjustsFontSizeToFitWidth = NO;
+
     self.navigationItem.titleView = _lblNavBar;
     
     [self updateViewConstraints];

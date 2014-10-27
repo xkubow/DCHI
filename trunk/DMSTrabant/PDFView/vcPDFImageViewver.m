@@ -80,24 +80,19 @@
     [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     
     CGRect r = self.navigationController.navigationBar.frame;
-    UILabel *_lblNavBar = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, nr.size.width, r.size.height)];
+    UILabel *_lblNavBar = [Rezident setNavigationTitle:CGRectMake(0, 0, 400, r.size.height)];
     _lblNavBar.text = NSLocalizedString(@"Document", nil);
-    _lblNavBar.lineBreakMode = NSLineBreakByTruncatingTail;
-    _lblNavBar.backgroundColor = [UIColor clearColor];
-    _lblNavBar.textColor = [UIColor whiteColor];
-    _lblNavBar.font = [UIFont fontWithName:@"Verdana" size:25 ];
-    _lblNavBar.textAlignment = NSTextAlignmentCenter;
-    _lblNavBar.clipsToBounds = NO;
-    _lblNavBar.numberOfLines = 0;
-    _lblNavBar.adjustsFontSizeToFitWidth = NO;
     self.navigationItem.titleView = _lblNavBar;
 
-    
+    UIImage *btnImg = [[UIImage imageNamed:@"tlacitko"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 16)];
     NSString *strBack = NSLocalizedString(@"Back", nil);
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:strBack style:UIBarButtonItemStyleBordered target:self action:@selector(loadBack:)];
     [back setTitleTextAttributes: @{NSFontAttributeName : [UIFont fontWithName:@"Verdana-Bold" size:12.0]
                                           , NSForegroundColorAttributeName:[UIColor whiteColor]}
                               forState:UIControlStateNormal];
+    [back setBackgroundImage:btnImg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [back setBackgroundImage:btnImg forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    [back setBackgroundImage:btnImg forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     [back setTintColor:[UIColor whiteColor]];
     
     _btnAirPrint = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"airprinter.png"] style:UIBarButtonItemStylePlain target:self action:@selector(airPrintContent:)];
@@ -115,8 +110,8 @@
     UIBarButtonItem *btnEmail = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"mail.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sendEmail:)];
     [btnEmail setTintColor:[UIColor whiteColor]];
     
-    [self.navigationItem setLeftBarButtonItems:@[back, btnSign, btnEmail]];
-    [self.navigationItem setRightBarButtonItems:@[_btnAirPrint, _btnServerPrint, btnOpenIn]];
+    [self.navigationItem setLeftBarButtonItems:@[back]];
+    [self.navigationItem setRightBarButtonItems:@[_btnAirPrint, _btnServerPrint, btnSign, btnEmail, btnOpenIn]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(printersRespond:) name:@"Printers" object: nil];
 }

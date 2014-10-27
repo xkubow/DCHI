@@ -301,10 +301,19 @@
     
     CGRect r = [_detailView rectForRowAtIndexPath:_detailView.indexPathForSelectedRow];
     
-    [cell.textLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:17]];
-    cell.textLabel.highlightedTextColor = [UIColor whiteColor];
-    [cell.detailTextLabel setFont:[UIFont fontWithName:@"Verdana" size:14]];
-    cell.detailTextLabel.highlightedTextColor = [UIColor whiteColor];
+    UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(r.size.width - 596, 5, 380, 18)];
+    lblTitle.textAlignment = NSTextAlignmentLeft;
+    lblTitle.backgroundColor = [UIColor clearColor];
+    lblTitle.font = [UIFont fontWithName:@"Verdana-Bold" size:17];
+    lblTitle.tag = eTITLETEXT;
+    [cell.contentView addSubview:lblTitle];
+    
+    UILabel *lblDetail = [[UILabel alloc] initWithFrame:CGRectMake(r.size.width - 596, 29, 380, 18)];
+    lblDetail.textAlignment = NSTextAlignmentLeft;
+    lblDetail.backgroundColor = [UIColor clearColor];
+    lblDetail.font = [UIFont fontWithName:@"Verdana" size:14];
+    lblDetail.tag =eDETAILTEXT;
+    [cell.contentView addSubview:lblDetail];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [btn addTarget:self action:@selector(packetInfoButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -320,13 +329,6 @@
     [btn setBackgroundImage:okIcon forState:UIControlStateSelected];
     btn.tag = eOKBTN;
     [cell.contentView addSubview:btn];
-    
-    UILabel *lblDetail = [[UILabel alloc] initWithFrame:CGRectMake(r.size.width - 596, 29, 380, 18)];
-    lblDetail.textAlignment = NSTextAlignmentLeft;
-    lblDetail.backgroundColor = [UIColor clearColor];
-    lblDetail.font = [UIFont fontWithName:@"Verdana" size:14];
-    lblDetail.tag =eDETAILTEXT;
-    [cell.contentView addSubview:lblDetail];
     
     UILabel *lblPc = [[UILabel alloc] initWithFrame:CGRectMake(r.size.width - 230, 29, 120, 18)];
     lblPc.textAlignment = NSTextAlignmentRight;
@@ -429,7 +431,8 @@
 
 - (void) loadPaketyData:(UITableViewCell*) cell data:(NSDictionary *)data
 {
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [data objectForKey:@"WORKSHOP_PACKET_DESCRIPTION" ]];
+    UILabel *lblTitle = (UILabel *)[cell viewWithTag:eTITLETEXT];
+    lblTitle.text = [NSString stringWithFormat:@"%@", [data objectForKey:@"WORKSHOP_PACKET_DESCRIPTION" ]];
     
     UILabel *lblDetail = (UILabel *)[cell viewWithTag:eDETAILTEXT];
     if(existInDic(data, @"RESTRICTIONS"))
@@ -846,12 +849,12 @@
     
     myPopoverController = [[UIPopoverController alloc] initWithContentViewController:nc];
     myPopoverController.delegate = self;
-    myPopoverController.popoverContentSize = CGSizeMake(835, 364 + _baseView.navigationController.navigationBar.frame.size.height);//384);
+    myPopoverController.popoverContentSize = CGSizeMake(839, 364 + _baseView.navigationController.navigationBar.frame.size.height);//384);
     
     UIButton *b = (UIButton*)[cell.contentView viewWithTag:eCELKYSLUZBABTN];
     CGRect r = [cell convertRect:b.frame toView:_baseView.view];
     
-    CGSize nrSize = CGSizeMake(835, 44);;
+    CGSize nrSize = CGSizeMake(839, 44);;
     UIImage *img = [UIImage imageNamed:@"alu_texture_navigation.png"];
     
     UIGraphicsBeginImageContext(nrSize);
@@ -863,7 +866,10 @@
     nc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [nc.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     
-    picker.title = [NSString stringWithFormat:@"%@ - %@, %@", _unitName, cell.textLabel.text, cell.detailTextLabel.text ];
+    if([cell.detailTextLabel.text isEqualToString:@"-"])
+        picker.title = [NSString stringWithFormat:@"%@ - %@", _unitName, cell.textLabel.text];
+    else
+        picker.title = [NSString stringWithFormat:@"%@ - %@, %@", _unitName, cell.textLabel.text, cell.detailTextLabel.text ];
     
 //    [nc.navigationItem setTitle:];
 //    nc.navigationBar.topItem.title =

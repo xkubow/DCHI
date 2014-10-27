@@ -75,7 +75,7 @@
     }
     else if(existInDic([DMSetting sharedDMSetting].vozidlo, @"PLANNED_ORDER_ID"))
     {
-        lblCheckinNr.textColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.9 alpha:0.5];//[UIColor blueColor];
+        lblCheckinNr.textColor = [UIColor colorWithRed:0.18 green:0.35 blue:0.7 alpha:1];//[UIColor colorWithRed:0.2 green:0.2 blue:0.9 alpha:0.5];//[UIColor blueColor];
         lblCheckinNr.text = [[DMSetting sharedDMSetting].vozidlo objectForKey:@"PLANNED_ORDER_NO"];
     }
     else

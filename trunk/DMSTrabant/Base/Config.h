@@ -31,4 +31,5 @@
 +(NSInteger)getImageTimeOut;
 +(BOOL)useExternalSignificant;
 +(NSString *)getSignificantURL;
++(BOOL)getPacketDetail;
 @end

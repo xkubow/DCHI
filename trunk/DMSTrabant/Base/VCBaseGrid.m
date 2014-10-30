@@ -223,10 +223,11 @@
     gridTableView.delegate = self;
     gridTableView.dataSource = self;
     gridTableView.backgroundColor = [UIColor clearColor];
-    if([gridTableView respondsToSelector:@selector(setSeparatorInset:)]) {
+    if([gridTableView respondsToSelector:@selector(setSeparatorInset:)])
         [gridTableView setSeparatorInset:UIEdgeInsetsZero];
+    if([gridTableView respondsToSelector:@selector(setLayoutMargins:)])
         gridTableView.layoutMargins = UIEdgeInsetsZero;
-    }
+    
     [self.view addSubview:gridTableView];
     [self.view layoutSubviews];
 }
@@ -354,7 +355,8 @@
         cell = [[myTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.selectionStyle = _cellSelectionStyle;
         [self createGridFromColumsWithCell:cell indexPath:indexPath];
-        cell.layoutMargins = UIEdgeInsetsZero;
+        if([cell respondsToSelector:@selector(setLayoutMargins:)])
+            cell.layoutMargins = UIEdgeInsetsZero;
         cell.backgroundColor = [UIColor clearColor];
         
         UIView *bgColorView = [[UIView alloc] init];

@@ -55,7 +55,7 @@
         _packet = packet;
         NSArray *packetDetail = [_packet valueForKey:@"DETAIL_LIST"];
         
-        NSPredicate *predicateND = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'SPARE_PART'"];
+        NSPredicate *predicateND = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'SPARE_PART' OR CAPAKET_ITEM_ENUM like 'SMALL_PARTS'"];
         NSPredicate *predicatePP = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'LABOR_POSITION'"];
         
         _NDPaketDetailArray = [packetDetail filteredArrayUsingPredicate:predicateND];
@@ -101,10 +101,10 @@
     
     filtered = eALL;
     
-    if([tvPaketInfo respondsToSelector:@selector(setSeparatorInset:)]) {
+    if([tvPaketInfo respondsToSelector:@selector(setSeparatorInset:)])
         [tvPaketInfo setSeparatorInset:UIEdgeInsetsZero];
+    if([tvPaketInfo respondsToSelector:@selector(setLayoutMargins:)])
         tvPaketInfo.layoutMargins = UIEdgeInsetsZero;
-    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -148,6 +148,28 @@
 
 #pragma mark -tableViewDelegate methods
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    BOOL showHeader = NO;
+    
+    NSInteger filteredSection = section;
+    if(filtered != eALL)
+        filteredSection = (filtered == ePP)?1:0;
+    
+    switch (filteredSection) {
+        case 0:
+            showHeader = (_NDPaketDetailArray.count > 0);
+            break;
+        case 1:
+            showHeader = (_PPPaketDetailArray.count > 0);
+            break;
+        default:
+            showHeader = NO;
+            break;
+    }
+    
+    return (showHeader)?20.0:0.0;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -173,8 +195,34 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    BOOL showHeader = NO;
+    NSString *caption;
+    
+    NSInteger filteredSection = section;
+    if(filtered != eALL)
+        filteredSection = (filtered == ePP)?1:0;
+    
+    switch (filteredSection) {
+        case 0:
+            caption = NSLocalizedString(@"ND", @"ND");
+            showHeader = (_NDPaketDetailArray.count > 0);
+            break;
+        case 1:
+            caption = NSLocalizedString(@"PP", @"PP");
+            showHeader = (_PPPaketDetailArray.count > 0);
+            break;
+        default:
+            caption = @"";
+            break;
+    }
+    
+    CGFloat heigth = (showHeader)?20.0:0.0;
+    
     UIView *sectionHeaderView = [[UIView alloc] initWithFrame:
-                                 CGRectMake(0, 0, tableView.frame.size.width, 20.0)];
+                                 CGRectMake(0, 0, tableView.frame.size.width, heigth)];
+    if(!showHeader)
+        return nil;
+    
     sectionHeaderView.backgroundColor = [UIColor colorWithRed:0.923 green:0.923 blue:0.925 alpha:1];
     
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:
@@ -185,22 +233,9 @@
     [headerLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:17.0]];
     [headerLabel setTextColor:[UIColor blackColor]];
     [sectionHeaderView addSubview:headerLabel];
+    headerLabel.text = caption;
     
-    NSString *caption;
-    switch (section) {
-        case 0:
-            caption = NSLocalizedString(@"ND", @"ND");
-            break;
-        case 1:
-            caption = NSLocalizedString(@"PP", @"PP");
-            break;
-        default:
-            caption = @"";
-            break;
-    }
-            headerLabel.text = caption;
-            
-            return sectionHeaderView;
+    return sectionHeaderView;
 }
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -255,7 +290,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.layoutMargins = UIEdgeInsetsZero;
+        if([cell respondsToSelector:@selector(setLayoutMargins:)])
+            cell.layoutMargins = UIEdgeInsetsZero;
     }
     
     switch (section) {
@@ -280,7 +316,8 @@
 //    cell.textLabel.text = [data valueForKey:@"CAPAKET_ITEM_NUMBER"];
 //    cell.detailTextLabel.text = [data valueForKey:@"CAPAKET_ITEM_DESCRIPTION"];
 
-    cell.ItemNumber.text = [data valueForKey:@"CAPAKET_ITEM_NUMBER"];
+    if(existInDic(data, @"CAPAKET_ITEM_NUMBER"))
+        cell.ItemNumber.text = [data valueForKey:@"CAPAKET_ITEM_NUMBER"];
     cell.Nazev.text = [data valueForKey:@"CAPAKET_ITEM_DESCRIPTION"];
     
     if(existInDic(data, @"AMOUNT")) {

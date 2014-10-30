@@ -104,6 +104,12 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
++(BOOL)getPacketDetail {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%d", [defaults boolForKey:@"detailPaket"]);
+    return [defaults boolForKey:@"detailPaket"];
+}
+
 +(BOOL)useExternalSignificant {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"%d", [defaults boolForKey:@"useExternalSignificantApp"]);

@@ -19,5 +19,6 @@
 
 -(void) reloadData;
 -(void) setPakety;
+-(void) refreshWPData;
 
 @end

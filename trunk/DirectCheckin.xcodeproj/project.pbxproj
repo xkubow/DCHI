@@ -2084,8 +2084,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Kubis (498S9FT73J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Kubis (498S9FT73J)";
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/DMSTrabant/Libs",
@@ -2113,7 +2113,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "Portable Check-In";
-				PROVISIONING_PROFILE = "80d4a3eb-4b7b-4929-934f-14cf3686703d";
+				PROVISIONING_PROFILE = "b6b715bc-92ee-4dcd-9464-c1dfa517fdec";
 				REZ_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include";

@@ -113,11 +113,12 @@
 {
 
     if(_reloadData){
+        _reloadPackets = NO;
         [vc reloadData];
         _reloadData = NO;
     }
     else if(_reloadPackets) {
-        [vc setPakety];
+        [vc refreshWPData];
         _reloadPackets = NO;
     }
 

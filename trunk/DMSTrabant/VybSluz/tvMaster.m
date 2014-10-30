@@ -89,10 +89,10 @@
         obj.masterView = master;
         obj.detailData = detailData;
         
-        if([obj.masterView respondsToSelector:@selector(setSeparatorInset:)]) {
+        if([obj.masterView respondsToSelector:@selector(setSeparatorInset:)])
             [obj.masterView setSeparatorInset:UIEdgeInsetsZero];
+        if([obj.masterView respondsToSelector:@selector(setLayoutMargins:)])
             obj.masterView.layoutMargins = UIEdgeInsetsZero;
-        }
     }
     return obj;
 }
@@ -176,7 +176,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.layoutMargins = UIEdgeInsetsZero;
+        if([cell respondsToSelector:@selector(setLayoutMargins:)])
+            cell.layoutMargins = UIEdgeInsetsZero;
         [cell.textLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:17]];  // @{NSFontAttributeName : @"Verdana-Bold"};
         cell.textLabel.highlightedTextColor = [UIColor whiteColor];
         
@@ -190,7 +191,7 @@
     {
         cell.tag = 0;
         cell.imageView.image = nil;
-        NSLog(@"%d, %d, %@", indexPath.section, indexPath.row, [_masterData[indexPath.section][indexPath.row] objectForKey:@"TEXT"]);
+        NSLog(@"%zd, %zd, %@", indexPath.section, indexPath.row, [_masterData[indexPath.section][indexPath.row] objectForKey:@"TEXT"]);
         cell.textLabel.text = [_masterData[indexPath.section][indexPath.row] objectForKey:@"TEXT"];
         if([[_masterData[indexPath.section][indexPath.row] objectForKey:@"MANDATORY"] integerValue] || indexPath.section == 2) {
             if([[_masterData[indexPath.section][indexPath.row] objectForKey:@"MANDATORY"] integerValue] == 2

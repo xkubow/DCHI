@@ -490,6 +490,10 @@
     }
     else if([notification.object isEqualToString:@"GetWPForCheckIn"])
     {
+        ((tbcBarController *)self.tabBarController).reloadPackets = YES;
+    }
+    else if([notification.object isEqualToString:@"GetWPForCheckIn"])
+    {
         NSLog(@"%@", ROOTNAVIGATOR.presentedViewController);
         
     }

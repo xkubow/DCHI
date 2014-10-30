@@ -131,10 +131,10 @@
         
         packetInfo = [UIImage imageNamed:@"Info_icon"];
         
-        if([_detailView respondsToSelector:@selector(setSeparatorInset:)]) {
+        if([_detailView respondsToSelector:@selector(setSeparatorInset:)])
             [_detailView setSeparatorInset:UIEdgeInsetsZero];
+        if([_detailView respondsToSelector:@selector(setLayoutMargins:)])
             _detailView.layoutMargins = UIEdgeInsetsZero;
-        }
     }
     return self;
 }
@@ -169,7 +169,8 @@
     if (cell == nil) {
         cell = [[myTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.clipsToBounds = NO;
-        cell.layoutMargins = UIEdgeInsetsZero;
+        if([cell respondsToSelector:@selector(setLayoutMargins:)])
+            cell.layoutMargins = UIEdgeInsetsZero;
         
         UIView *bgColorView = [[UIView alloc] init];
         bgColorView.backgroundColor = [UIColor colorWithRed:(76.0/255.0) green:(161.0/255.0) blue:(255.0/255.0) alpha:1.0]; // perfect color suggested by @mohamadHafez
@@ -444,9 +445,9 @@
     if(existInDic(data, @"SPARE_PART_DISPON_ID"))
         isAvailable = [[data objectForKey:@"SPARE_PART_DISPON_ID"] boolValue];//isEqualToString:@"NOT_AVAILABLE"];
     if(isAvailable)
-        cell.imageView.image = (isEconomy)?packetOrangeE: packetOrange;
-    else
         cell.imageView.image = (isEconomy)?packetGreenE: packetGreen;
+    else
+        cell.imageView.image = (isEconomy)?packetOrangeE: packetOrange;
     
     UIButton *btn = (UIButton *)[cell viewWithTag:eOKBTN];
     if(existInDic(data, @"SELL_PRICE")) {
@@ -914,6 +915,7 @@
             [[_detailData objectAtIndex:row] removeObjectForKey:@"CHCK_REQUIRED_ID"];
             [[_detailData objectAtIndex:row] removeObjectForKey:@"SELL_PRICE"];
         }
+        [_detailView setEditing:NO animated:YES];
     }
 }
 

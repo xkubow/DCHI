@@ -112,6 +112,16 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
+			<string>detailPaket</string>
+			<key>Key</key>
+			<string>detailPaket</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
 			<string>useExternalSignificantApp</string>
 			<key>Key</key>
 			<string>useExternalSignificantApp</string>

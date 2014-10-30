@@ -90,7 +90,7 @@
     else
         [d setValue:@"" forKey:@"vin"];
     
-    [d setValue:@"true" forKey:@"detail"];
+    [d setValue:([Config getPacketDetail])?@"true":@"false" forKey:@"detail"];
     [self sendGetMessage:d action:@"GetWPForCheckIn" backgroud:YES];
     [[self backQueue] go];
 }
@@ -1029,9 +1029,9 @@
     [Config saveToUserDefaults:@"OBD_DTC_LOAD" value:@"0"];
 //    [baseDB insertRecordsForTable:@"OBD_DTC" data:[object objectForKey:@"OBD_DTC"]];
 //    [baseDB insertRecordsForTable:@"OBD_DTC_LOC" data:[object objectForKey:@"OBD_DTC_LOC"]];
-    NSLog(@"%d", [baseDB getDBVersion]);
+    NSLog(@"%zd", [baseDB getDBVersion]);
     [Config setMinorDBVersion:[baseDB getDBVersion]];
-    NSLog(@"%d", [Config getMinorDBVersion]);
+    NSLog(@"%zd", [Config getMinorDBVersion]);
     
     if([Config getMinorDBVersion] < 0)
     {

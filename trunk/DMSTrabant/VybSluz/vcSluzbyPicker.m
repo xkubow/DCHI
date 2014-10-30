@@ -63,10 +63,10 @@
     packetOrange = [UIImage imageNamed:@"packet_orange"];
     packetOrangeE = [UIImage imageNamed:@"packet_orange_E"];
     
-    if([tvServices respondsToSelector:@selector(setSeparatorInset:)]) {
+    if([tvServices respondsToSelector:@selector(setSeparatorInset:)])
         [tvServices setSeparatorInset:UIEdgeInsetsZero];
+    if([tvServices respondsToSelector:@selector(setLayoutMargins:)])
         tvServices.layoutMargins = UIEdgeInsetsZero;
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -175,7 +175,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.layoutMargins = UIEdgeInsetsZero;
+        if([cell respondsToSelector:@selector(setLayoutMargins:)])
+            cell.layoutMargins = UIEdgeInsetsZero;
         
         [cell.textLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:17]];
         cell.textLabel.highlightedTextColor = [UIColor whiteColor];

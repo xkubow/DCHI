@@ -14,6 +14,7 @@
 #import "DejalActivityView.h"
 #import "vcEmail.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Config.h"
 #define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
 #define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
 
@@ -102,6 +103,8 @@
     [_btnServerPrint setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem *btnSign = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sign.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sign:)];
+    BOOL enableSign = ([Config retrieveFromUserDefaults:@"SignificantServerUrl"].length > 0);
+    btnSign.enabled = enableSign;
     [btnSign setTintColor:[UIColor whiteColor]];
     
     UIBarButtonItem *btnOpenIn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(openIn:)];

@@ -20,6 +20,7 @@
     __weak IBOutlet UITableView *tvPaketInfo;
     NSArray *_NDPaketDetailArray;
     NSArray *_PPPaketDetailArray;
+    NSDictionary *_smallParts;
     NSDictionary *_packet;
     enum filterEnum {eND=0, ePP=1, eALL=999999};
     enum filterEnum filtered;
@@ -55,11 +56,13 @@
         _packet = packet;
         NSArray *packetDetail = [_packet valueForKey:@"DETAIL_LIST"];
         
-        NSPredicate *predicateND = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'SPARE_PART' OR CAPAKET_ITEM_ENUM like 'SMALL_PARTS'"];
+        NSPredicate *predicateND = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'SPARE_PART'"];
         NSPredicate *predicatePP = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'LABOR_POSITION'"];
+        NSPredicate *predicateSP = [NSPredicate predicateWithFormat:@"CAPAKET_ITEM_ENUM like 'SMALL_PARTS'"];
         
         _NDPaketDetailArray = [packetDetail filteredArrayUsingPredicate:predicateND];
         _PPPaketDetailArray = [packetDetail filteredArrayUsingPredicate:predicatePP];
+        _smallParts = [packetDetail filteredArrayUsingPredicate:predicateSP].lastObject;
     }
     return self;
 }
@@ -162,6 +165,9 @@
         case 1:
             showHeader = (_PPPaketDetailArray.count > 0);
             break;
+        case 2:
+            showHeader = (_smallParts != nil);
+            break;
         default:
             showHeader = NO;
             break;
@@ -180,7 +186,9 @@
         case 1:
             return 50;
             break;
-            
+        case 2:
+            return 50;
+            break;
         default:
             return tableView.rowHeight;
             break;
@@ -190,7 +198,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return (filtered == eALL)?2:1;
+    return (filtered == eALL)?3:1;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -204,12 +212,16 @@
     
     switch (filteredSection) {
         case 0:
-            caption = NSLocalizedString(@"ND", @"ND");
+            caption = NSLocalizedString(@"ND", nil);
             showHeader = (_NDPaketDetailArray.count > 0);
             break;
         case 1:
-            caption = NSLocalizedString(@"PP", @"PP");
+            caption = NSLocalizedString(@"PP", nil);
             showHeader = (_PPPaketDetailArray.count > 0);
+            break;
+        case 2:
+            caption = NSLocalizedString(@"SP", nil);
+            showHeader = (_smallParts != nil);
             break;
         default:
             caption = @"";
@@ -269,6 +281,9 @@
         case 1:
             return _PPPaketDetailArray.count;
             break;
+        case 2:
+            return 1;
+            break;
         default:
             return 0;
             break;
@@ -279,10 +294,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger section;
-    if(filtered == eALL)
-        section = indexPath.section;
-    else
+    NSInteger section = indexPath.section;
+    if(filtered != eALL)
         section = (filtered == ePP)?1:0;
     
     NSString *CellIdentifier = (section == 0)?@"NDCell":@"PPCell";
@@ -300,6 +313,9 @@
             break;
         case 1:
             [self fillPPCell:(tvcPPPacketInfo*)cell cellForRowAtIndexPath:indexPath];
+            break;
+        case 2:
+            [self fillSPCell:(tvcPPPacketInfo*)cell];
             break;
     
         default:
@@ -353,6 +369,20 @@
     
     cell.imageView.image = _prace;
     
+}
+
+-(void)fillSPCell:(tvcPPPacketInfo*)cell {
+    cell.Nazev.text = [_smallParts valueForKey:@"CAPAKET_ITEM_DESCRIPTION"];
+    cell.CisloPP.text = @"";
+    
+    if(existInDic(_smallParts, @"SELL_PRICE")) {
+        NSNumber *n = [_smallParts valueForKey:@"SELL_PRICE"];
+        cell.PC.text = [NSString stringWithFormat:@"%@ %@", [TRABANT_APP_DELEGATE.numFormat stringFromNumber:n], [[DMSetting sharedDMSetting].setting valueForKey:@"CURRENCY_ABBREV"]];
+    }
+    else
+        cell.PC.text = @"";
+    
+//    cell.imageView.image = _prace;
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

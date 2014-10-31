@@ -456,6 +456,14 @@
         else
             [btn setSelected:NO];
     }
+
+    btn = (UIButton *)[cell viewWithTag:eDETAIL];
+    if(existInDic(data, @"DETAIL_LIST")) {
+        NSArray *detail = [data valueForKey:@"DETAIL_LIST"];
+        btn.enabled = (detail.count > 0);
+    }
+    else
+        btn.enabled = NO;
     
     UILabel *tf = (UILabel *)[cell viewWithTag:eCELKYPC];
     NSScanner *s;

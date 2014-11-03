@@ -43,10 +43,14 @@
 
 + (WSDCHIDataTransfer *) sharedWSDCHIDataTransfer
 {
+    static dispatch_once_t pred;
     static WSDCHIDataTransfer * shared = nil;
-    if ( !shared ) {
-        shared = [[self alloc] init];
-    }
+    
+    dispatch_once(&pred, ^{
+        shared = [[WSDCHIDataTransfer alloc] init];
+    });
+//    if ( !shared )
+//        shared = [[self alloc] init];
     return shared;
 }
 

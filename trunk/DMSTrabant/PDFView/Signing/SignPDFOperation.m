@@ -64,7 +64,7 @@
     // button OK clicked, close the document
     if (buttonIndex == 1) {
         [[[XCASDK_Manager sharedManager] getXCAViewController] dismissViewControllerAnimated:YES completion:nil];
-        [DejalBezelActivityView removeViewAnimated:YES];
+//        [DejalBezelActivityView removeViewAnimated:YES];
         [[UITabBar appearance] setTintColor:[UIColor colorWithRed:155.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1]];
     }
 }
@@ -79,6 +79,12 @@
 //        return pSupportsPressure;
 //    }
     return YES;
+}
+- (void) XCASDK_Operations_WorkstepSynced: 		(NSString *)  	workstepId
+                     withServerWorkstepId: 		(NSString *)  	serverWorkstepId
+{
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:155.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1]];
+    [[[XCASDK_Manager sharedManager] getXCAViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 

@@ -7,6 +7,10 @@
 //
 
 #import "SignPDFInit.h"
+#import "Rezident.h"
+#import "TrabantAppDelegate.h"
+#define TRABANT_APP_DELEGATE ((TrabantAppDelegate*)[[UIApplication sharedApplication] delegate])
+#define ROOTNAVIGATOR ([TRABANT_APP_DELEGATE rootNavController])
 
 @implementation SignPDFInit
 
@@ -16,9 +20,61 @@
                                       onPlace: 		(XCAControlPlace)  	pXCAPlace
                            withIdentification: 		(NSString *)  	pXCAIdentification
 {
-    NSLog(@"%@", pCocoaControl);
+    if(pControlType == kUINavigationBar) {
+        NSLog(@"Navigation BARRR, %@", pCocoaControl);
+        
+        UINavigationBar *navBar = (UINavigationBar *)pCocoaControl;
+        [navBar setBackgroundColor:[UIColor greenColor]];
+//        [navBar setBackgroundImage:[UIImage imageNamed:@"alu_texture_navigation.png"] forBarMetrics:UIBarMetricsDefault];
+//        CGRect r = navBar.frame;
+//        UILabel *lblNavBar = [Rezident setNavigationTitle:CGRectMake(0, 0, navBar.frame.size.width, r.size.height)];
+//        lblNavBar.text = ROOTNAVIGATOR.vozCaption;
+//        self.navigationItem.titleView = lblNavBar;
+    }
+    else if(pControlType == kUIView && kXCAMainView == pXCAPlace) {
+        UIView *v = (UIView *)pCocoaControl;
+        NSLog(@"%@", v.superview);
+        UIImage *img = [UIImage imageNamed:@"alutexture_bg.png"];
+        UIImageView *imgViev = [[UIImageView alloc] initWithImage:img];
+        [v addSubview:imgViev];
+        [v setBackgroundColor:[UIColor clearColor]];
+    } else if(pControlType == kUIToolbar && pXCAPlace == kXCASignatureView)
+    {
+        UIToolbar *tb = (UIToolbar *) pCocoaControl;
+        [tb setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"alu_texture_navigation.png"]]];
+    }
+    
+    NSString *controlTyp = [[self class] ControlTypesEnums][pControlType];
+    NSString *place = [[self class] ControlPlacesEnums][pXCAPlace];
+    
+    NSLog(@"%@:%@", controlTyp, place);
     
 }
+
+- (UIColor *) XCASDK_Initialize_colorOfType: 		(XCAColorType)  	pXCAColorType
+                                    onPlace: 		(XCAControlPlace)  	pXCAPlace
+{
+    NSLog(@"%@", [[self class] ControlPlacesEnums][pXCAPlace]);
+    NSLog(@"%@", [[self class] ColorTypesEnums][pXCAColorType]);
+    if(pXCAColorType == kXCAToolbarBackgroundColor)
+    {
+        return [UIColor colorWithRed:0.471 green:0.612 blue:0.639 alpha:1];
+    }
+    return  [UIColor whiteColor];
+}
+
+-(NSString *)XCASDK_Initialize_GetPreferenceForKey:(NSString *)pPreferenceKey {
+    if (pPreferenceKey == nil) return nil;
+    NSLog(@"wants value for %@", pPreferenceKey);
+    NSString *result = nil;
+    
+    if (NSOrderedSame == [pPreferenceKey compare:@"server_address_v1"]) {
+        result = @"http://10.219.61.104:57003";
+    }
+    NSLog(@"returning value %@", result);
+    return result;
+}
+
 
 /*
  //Change the encryption certificate
@@ -38,33 +94,77 @@
  }
  */
 
-
--(NSString *)XCASDK_Initialize_GetPreferenceForKey:(NSString *)pPreferenceKey {
-    if (pPreferenceKey == nil) return nil;
-    NSLog(@"wants value for %@", pPreferenceKey);
-    NSString *result = nil;
-    
-    if (NSOrderedSame == [pPreferenceKey compare:@"server_address_v1"]) {
-        result = @"http://10.219.61.104:57003";
-    }
-    NSLog(@"returning value %@", result);
-    return result;
++ (NSArray *)ControlTypesEnums
+{
+    static NSArray *enums;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        enums = @[@"kUIButton",
+                    @"kUISwitch",
+                    @"kUIView",
+                    @"kUIImageView",
+                    @"kUIToolbar",
+                    @"kUIToolbarButton",
+                    @"kUILabel",
+                    @"kUISlider",
+                    @"kUINavigationBar",
+                    @"kUIBarButtonItem"];
+    });
+    return enums;
 }
 
--(UIColor *)XCASDK_Initialize_colorForReusableControlWithId:(NSString *)pXCAIdentification onPlace:(XCAControlPlace)pXCAPlace
++ (NSArray *)ControlPlacesEnums
 {
-    // iOS 7
-    if ([[[UIDevice currentDevice] systemVersion] compare:@"7" options:NSNumericSearch] != NSOrderedAscending)
-    {
-        if ([pXCAIdentification isEqualToString:@"navBarBackgroundColor"] ||
-            [pXCAIdentification isEqualToString:@"toolbarBackgroundColor"] ||
-            [pXCAIdentification isEqualToString:@"tabBarBackgroundColor"])
-        {
-            return [UIColor colorWithRed:1.0 green:0.7 blue:0.7 alpha:1.0];
-        }
-    }
-    
-    return [UIColor redColor];
+    static NSArray *enums;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        enums = @[@"kXCAMainToolbar",
+                  @"kXCAMainView",
+                  @"kXCASignatureView",
+                  @"kXCAHelpScreen",
+                  @"kXCAOfflineWsPicker",
+                  @"kXCADocumentList",
+                  @"kXCATaskList",
+                  @"kXCAEntireApp",
+                  @"kXCALicenseScreen",
+                  @"kXCASettingsList",
+                  @"kXCASyncStateList",
+                  @"kXCAMenuBar",
+                  @"kXCADocumentView",
+                  @"kXCAFreeHandToolbar",
+                  @"kXCAPictureAnnotationToolbar"];
+    });
+    return enums;
+}
+
++ (NSArray *)ColorTypesEnums
+{
+    static NSArray *enums;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        enums = @[@"kXCAMainTintColor",
+                 @"kXCAViewBackgroundColor",
+                 @"kXCANavBarTintColor",
+                 @"kXCANavBarTitleTextColor",
+                 @"kXCANavBarBackgroundColor",
+                 @"kXCATabBarTintColor",
+                 @"kXCATabBarBackgroundColor",
+                 @"kXCAToolbarTintColor",
+                 @"kXCAToolbarTitleTextColor",
+                 @"kXCAToolbarBackgroundColor",
+                 @"kXCATableViewBackgroundColor",
+                 @"kXCATableViewCellBackgroundColor",
+                 @"kXCATableViewCellSelectedBackgroundColor",
+                 @"kXCATableViewCellTitleColor",
+                 @"kXCAFormFieldDisabledBackgroundColor",
+                 @"kXCAFormFieldFocusedBackgroundColor",
+                 @"kXCAFormFieldEmptyBackgroundColor",
+                 @"kXCAFormFieldDefaultBackgroundColor",
+                 @"kXCAFormFieldDisabledBorderColor",
+                 @"kXCAFormFieldRequiredBorderColor",
+                 @"kXCAFormFieldDefaultBorderColor"];
+    });
+    return enums;
 }
 
 @end

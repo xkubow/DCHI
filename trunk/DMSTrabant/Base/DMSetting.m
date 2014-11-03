@@ -65,11 +65,16 @@
     return self;
 }
 
-+ (DMSetting *) sharedDMSetting { 
++ (DMSetting *) sharedDMSetting {
+    static dispatch_once_t pred;
     static DMSetting * shared = nil;
-    if ( !shared )
-        shared = [[self alloc] init];
-    return shared; 
+    
+    dispatch_once(&pred, ^{
+        shared = [[DMSetting alloc] init];
+    });
+//    if ( !shared )
+//        shared = [[self alloc] init];
+    return shared;
 }
 
 -(NSDictionary*)vozidlo
